@@ -11,8 +11,8 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var emailTextField: RoundedTextField!
-    @IBOutlet private weak var passwordTextField: RoundedTextField!
-    @IBOutlet private weak var loginButton: RoundedButton!
+    @IBOutlet private weak var passwordTextField: PasswordTextField!
+    @IBOutlet private weak var loginButton: LoadingButton!
     @IBOutlet private weak var orLabel: UILabel!
     @IBOutlet private weak var registerButton: RoundedButton!
     
@@ -41,5 +41,25 @@ public final class LoginViewController: UIViewController {
         registerButton.setTitle(Strings.register.localized, for: .normal)
         registerButton.layer.borderColor = UIColor.primaryGreen?.cgColor
         registerButton.layer.borderWidth = 1
+    }
+    
+    @IBAction private func didTapLoginButton() {
+        loginButton.showLoading()
+    }
+    
+    @IBAction private func didTapRegisterButton() {
+        
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

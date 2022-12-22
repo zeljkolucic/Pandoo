@@ -53,18 +53,24 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="9wD-BZ-OER"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1Gu-JY-uoJ"/>
+                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6v-dg-vyh" customClass="RoundedTextField" customModule="Pandoo" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6v-dg-vyh" customClass="PasswordTextField" customModule="Pandoo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80" width="333" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="54Q-G6-rDi"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LWu-Nc-kNf"/>
+                                                                </connections>
                                                             </textField>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2c-WZ-kBu" customClass="RoundedButton" customModule="Pandoo" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2c-WZ-kBu" customClass="LoadingButton" customModule="Pandoo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="160" width="333" height="60"/>
                                                                 <color key="backgroundColor" name="Primary Green"/>
                                                                 <constraints>
@@ -74,6 +80,9 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="didTapLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOd-Df-WIu"/>
+                                                                </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="81w-C3-9MP">
                                                                 <rect key="frame" x="0.0" y="239.99999999999994" width="333" height="20.333333333333314"/>
@@ -114,6 +123,9 @@
                                                                 <state key="normal" title="Button">
                                                                     <color key="titleColor" name="Primary Green"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="didTapRegisterButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZ9-NY-7lb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -152,9 +164,9 @@
                     <connections>
                         <outlet property="emailTextField" destination="rBu-Al-XUu" id="NNJ-5C-Zha"/>
                         <outlet property="imageView" destination="QeG-IB-pRG" id="ava-IB-sy6"/>
-                        <outlet property="loginButton" destination="Y2c-WZ-kBu" id="g1t-DZ-xlY"/>
+                        <outlet property="loginButton" destination="Y2c-WZ-kBu" id="DWf-B8-B1T"/>
                         <outlet property="orLabel" destination="3Uf-ZE-gFl" id="JZ9-AN-gO5"/>
-                        <outlet property="passwordTextField" destination="W6v-dg-vyh" id="mQx-wV-40m"/>
+                        <outlet property="passwordTextField" destination="W6v-dg-vyh" id="yQZ-Xb-ZN5"/>
                         <outlet property="registerButton" destination="Dh2-dK-2cu" id="axl-hL-y6K"/>
                         <outlet property="titleLabel" destination="jeO-HY-VXO" id="l36-9q-Ln2"/>
                     </connections>

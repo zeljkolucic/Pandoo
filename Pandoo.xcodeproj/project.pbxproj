@@ -22,6 +22,10 @@
 		E42397B42955095D00DDAF53 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B32955095D00DDAF53 /* Strings.swift */; };
 		E42397B629550AEE00DDAF53 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B529550AEE00DDAF53 /* String+.swift */; };
 		E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42397B729550B4D00DDAF53 /* Localizable.strings */; };
+		E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B929550D6800DDAF53 /* PasswordTextField.swift */; };
+		E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BB29550DEA00DDAF53 /* LoadingButton.swift */; };
+		E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BD29550E8A00DDAF53 /* Validator.swift */; };
+		E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		E42397B32955095D00DDAF53 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E42397B529550AEE00DDAF53 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		E42397B729550B4D00DDAF53 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E42397B929550D6800DDAF53 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		E42397BB29550DEA00DDAF53 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		E42397BD29550E8A00DDAF53 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			children = (
 				E42397B22955095200DDAF53 /* Localization */,
 				E42397A3295503E100DDAF53 /* View Models */,
+				E42397BD29550E8A00DDAF53 /* Validator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E42397A4295503EA00DDAF53 /* LoginViewModel.swift */,
+				E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -159,8 +169,10 @@
 		E42397AB2955052600DDAF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E42397AC2955053100DDAF53 /* RoundedTextField.swift */,
 				E42397B02955085D00DDAF53 /* RoundedButton.swift */,
+				E42397AC2955053100DDAF53 /* RoundedTextField.swift */,
+				E42397B929550D6800DDAF53 /* PasswordTextField.swift */,
+				E42397BB29550DEA00DDAF53 /* LoadingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,13 +258,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
 				E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
+				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
+				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
 				E42397882954C82500DDAF53 /* AppDelegate.swift in Sources */,
 				E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */,
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
+				E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */,
 				E42397B629550AEE00DDAF53 /* String+.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,

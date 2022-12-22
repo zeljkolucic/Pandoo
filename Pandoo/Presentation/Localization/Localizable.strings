@@ -12,3 +12,14 @@
 "login" = "Login";
 "or" = "or";
 "register" = "Register";
+"registration_title" = "Registration";
+"empty_first_name" = "";
+"empty_last_name" = "";
+"empty_phone" = "";
+"empty_address" = "";
+"empty_email" = "";
+"invalid_email" = "";
+"empty_password" = "";
+"weakPassword" = "";
+"empty_password_confirmation" = "";
+"non_matching_passwords" = "";

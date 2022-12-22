@@ -30,10 +30,6 @@ class RoundedTextField: UITextField {
         configureLayout()
     }
     
-    private var cornerRadius: CGFloat {
-        return 5
-    }
-    
     func setPlaceholder(_ text: String, color: UIColor = .lightGray, font: UIFont = .preferredFont(forTextStyle: .body)) {
         attributedPlaceholder = NSAttributedString(
             string: text,
@@ -60,7 +56,7 @@ class RoundedTextField: UITextField {
         font = .preferredFont(forTextStyle: .body)
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = cornerRadius
+        layer.cornerRadius = 5
         constrainMessageLabel()
     }
     
