@@ -8,6 +8,14 @@
 import UIKit
 
 public final class LoginViewController: UIViewController {
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var emailTextField: RoundedTextField!
+    @IBOutlet private weak var passwordTextField: RoundedTextField!
+    @IBOutlet private weak var loginButton: RoundedButton!
+    @IBOutlet private weak var orLabel: UILabel!
+    @IBOutlet private weak var registerButton: RoundedButton!
+    
     private let viewModel: LoginViewModel
     
     init?(coder: NSCoder, viewModel: LoginViewModel) {
@@ -21,6 +29,10 @@ public final class LoginViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        configureLayout()
+    }
+    
+    private func configureLayout() {
+        
     }
 }
