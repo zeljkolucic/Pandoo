@@ -7,28 +7,6 @@
 
 import UIKit
 
-public final class LoginViewModel {
-    
-}
-
-public final class LoginViewController: UIViewController {
-    private let viewModel: LoginViewModel
-    
-    init?(coder: NSCoder, viewModel: LoginViewModel) {
-        self.viewModel = viewModel
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemPink
-    }
-}
-
 public final class LoginComposer {
     private init() {}
     
@@ -40,11 +18,5 @@ public final class LoginComposer {
             return LoginViewController(coder: coder, viewModel: viewModel)
         }
         return UINavigationController(rootViewController: viewController)
-    }
-}
-
-public extension UIViewController {
-    static var className: String {
-        return String(describing: self.self)
     }
 }
