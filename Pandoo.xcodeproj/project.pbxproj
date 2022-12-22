@@ -20,6 +20,8 @@
 		E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397AE295506E500DDAF53 /* UIColor+.swift */; };
 		E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B02955085D00DDAF53 /* RoundedButton.swift */; };
 		E42397B42955095D00DDAF53 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B32955095D00DDAF53 /* Strings.swift */; };
+		E42397B629550AEE00DDAF53 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B529550AEE00DDAF53 /* String+.swift */; };
+		E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42397B729550B4D00DDAF53 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E42397AE295506E500DDAF53 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		E42397B02955085D00DDAF53 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E42397B32955095D00DDAF53 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E42397B529550AEE00DDAF53 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		E42397B729550B4D00DDAF53 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			children = (
 				E42397A92955043B00DDAF53 /* UIViewController+className.swift */,
 				E42397AE295506E500DDAF53 /* UIColor+.swift */,
+				E42397B529550AEE00DDAF53 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 		E42397B22955095200DDAF53 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				E42397B729550B4D00DDAF53 /* Localizable.strings */,
 				E42397B32955095D00DDAF53 /* Strings.swift */,
 			);
 			path = Localization;
@@ -227,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42397942954C82600DDAF53 /* LaunchScreen.storyboard in Resources */,
+				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
 			);
@@ -246,6 +253,7 @@
 				E42397882954C82500DDAF53 /* AppDelegate.swift in Sources */,
 				E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */,
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
+				E42397B629550AEE00DDAF53 /* String+.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
 				E423979F2954C8A500DDAF53 /* LoginComposer.swift in Sources */,

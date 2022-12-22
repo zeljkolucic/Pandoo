@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Pandoo
+
+  Created by Zeljko Lucic on 22.12.22..
+  
+*/
+
+"app_name" = "Pandoo";
+"email" = "Email";
+"password" = "Password";
+"login" = "Login";
+"or" = "or";
+"register" = "Register";

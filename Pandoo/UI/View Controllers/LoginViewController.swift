@@ -33,6 +33,13 @@ public final class LoginViewController: UIViewController {
     }
     
     private func configureLayout() {
-        
+        titleLabel.text = Strings.appName.localized
+        emailTextField.setPlaceholder(Strings.email.localized)
+        passwordTextField.setPlaceholder(Strings.password.localized)
+        loginButton.setTitle(Strings.login.localized, for: .normal)
+        orLabel.text = Strings.or.localized
+        registerButton.setTitle(Strings.register.localized, for: .normal)
+        registerButton.layer.borderColor = UIColor.primaryGreen?.cgColor
+        registerButton.layer.borderWidth = 1
     }
 }
