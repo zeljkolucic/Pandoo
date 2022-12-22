@@ -17,9 +17,11 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private weak var registerButton: RoundedButton!
     
     private let viewModel: LoginViewModel
+    private let onRegister: (UINavigationController?) -> ()
     
-    init?(coder: NSCoder, viewModel: LoginViewModel) {
+    init?(coder: NSCoder, viewModel: LoginViewModel, onRegister: @escaping (UINavigationController?) -> ()) {
         self.viewModel = viewModel
+        self.onRegister = onRegister
         super.init(coder: coder)
     }
     
@@ -48,7 +50,7 @@ public final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapRegisterButton() {
-        
+        onRegister(navigationController)
     }
 }
 

@@ -26,6 +26,8 @@
 		E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BB29550DEA00DDAF53 /* LoadingButton.swift */; };
 		E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BD29550E8A00DDAF53 /* Validator.swift */; };
 		E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */; };
+		E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */; };
+		E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397C32955147700DDAF53 /* RegistrationComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E42397BB29550DEA00DDAF53 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		E42397BD29550E8A00DDAF53 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepRegistrationViewController.swift; sourceTree = "<group>"; };
+		E42397C32955147700DDAF53 /* RegistrationComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,7 @@
 			children = (
 				E42397A2295503D800DDAF53 /* Presentation */,
 				E423979C2954C85600DDAF53 /* UI */,
-				E423979D2954C89A00DDAF53 /* Composers */,
+				E423979D2954C89A00DDAF53 /* Composition */,
 				E423979B2954C84000DDAF53 /* Supporting Files */,
 			);
 			path = Pandoo;
@@ -113,12 +117,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E423979D2954C89A00DDAF53 /* Composers */ = {
+		E423979D2954C89A00DDAF53 /* Composition */ = {
 			isa = PBXGroup;
 			children = (
 				E423979E2954C8A500DDAF53 /* LoginComposer.swift */,
+				E42397C32955147700DDAF53 /* RegistrationComposer.swift */,
 			);
-			path = Composers;
+			path = Composition;
 			sourceTree = "<group>";
 		};
 		E42397A2295503D800DDAF53 /* Presentation */ = {
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E42397A0295503BF00DDAF53 /* LoginViewController.swift */,
+				E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			files = (
 				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
 				E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */,
+				E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
@@ -270,6 +277,7 @@
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
 				E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */,
 				E42397B629550AEE00DDAF53 /* String+.swift in Sources */,
+				E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
 				E423979F2954C8A500DDAF53 /* LoginComposer.swift in Sources */,

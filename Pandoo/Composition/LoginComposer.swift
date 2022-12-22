@@ -15,7 +15,7 @@ public final class LoginComposer {
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let viewModel = LoginViewModel()
         let viewController = storyboard.instantiateViewController(identifier: LoginViewController.className) { coder in
-            return LoginViewController(coder: coder, viewModel: viewModel)
+            return LoginViewController(coder: coder, viewModel: viewModel, onRegister: RegistrationComposer.pushFirstStepRegistrationViewController)
         }
         return UINavigationController(rootViewController: viewController)
     }

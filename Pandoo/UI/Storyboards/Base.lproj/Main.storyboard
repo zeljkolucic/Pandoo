@@ -169,11 +169,28 @@
                         <outlet property="passwordTextField" destination="W6v-dg-vyh" id="yQZ-Xb-ZN5"/>
                         <outlet property="registerButton" destination="Dh2-dK-2cu" id="axl-hL-y6K"/>
                         <outlet property="titleLabel" destination="jeO-HY-VXO" id="l36-9q-Ln2"/>
+                        <segue destination="rIT-Tv-wDL" kind="show" identifier="LoginToFirstStepRegistrationSegue" id="xh5-yk-Hwg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--First Step Registration View Controller-->
+        <scene sceneID="NFa-Sn-i6a">
+            <objects>
+                <viewController storyboardIdentifier="FirstStepRegistrationViewController" id="rIT-Tv-wDL" customClass="FirstStepRegistrationViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OEf-3i-lxN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hSo-ev-Ueg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7G9-8u-qG5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-TJ-SSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-27"/>
         </scene>
     </scenes>
     <resources>
