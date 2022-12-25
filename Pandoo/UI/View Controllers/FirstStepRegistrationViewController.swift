@@ -39,6 +39,7 @@ public final class FirstStepRegistrationViewController: UIViewController {
         phoneTextField.setPlaceholder(Strings.phone.localized)
         addressTextField.setPlaceholder(Strings.address.localized)
         nextButton.setTitle(Strings.next.localized, for: .normal)
+        nextButton.isEnabled = false
     }
     
     @IBAction private func didTapNextButton() {

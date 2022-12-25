@@ -31,4 +31,7 @@ public struct Strings {
     public static let phone = "phone"
     public static let address = "address"
     public static let next = "next"
+    public static let secondStepRegistrationTitle = "second_step_registration_title"
+    public static let confirmPassword = "confirm_password"
+    public static let submit = "submit"
 }

@@ -29,3 +29,6 @@
 "phone" = "Phone";
 "address" = "Address";
 "next" = "Next";
+"second_step_registration_title" = "Registration";
+"confirm_password" = "Confirm password";
+"submit" = "Submit";

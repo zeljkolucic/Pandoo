@@ -32,7 +32,12 @@ public final class SecondStepRegistrationViewController: UIViewController {
     }
     
     private func configureLayout() {
-        
+        navigationItem.title = Strings.secondStepRegistrationTitle.localized
+        emailTextField.setPlaceholder(Strings.email.localized)
+        passwordTextField.setPlaceholder(Strings.password.localized)
+        confirmPasswordTextField.setPlaceholder(Strings.confirmPassword.localized)
+        submitButton.setTitle(Strings.submit.localized, for: .normal)
+        submitButton.isEnabled = false
     }
     
     @IBAction private func didTapSubmitButton() {
