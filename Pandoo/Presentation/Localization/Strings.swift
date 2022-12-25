@@ -25,4 +25,10 @@ public struct Strings {
     public static let weakPassword = "weak_password"
     public static let emptyPasswordConfirmation = "empty_password_confirmation"
     public static let nonMatchingPasswords = "non_matching_passwords"
+    public static let firstStepRegistrationTitle = "first_step_registration_title"
+    public static let firstName = "first_name"
+    public static let lastName = "last_name"
+    public static let phone = "phone"
+    public static let address = "address"
+    public static let next = "next"
 }

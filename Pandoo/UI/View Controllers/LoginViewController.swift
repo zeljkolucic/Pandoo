@@ -35,6 +35,7 @@ public final class LoginViewController: UIViewController {
     }
     
     private func configureLayout() {
+        navigationController?.navigationBar.tintColor = .primaryGreen
         titleLabel.text = Strings.appName.localized
         emailTextField.setPlaceholder(Strings.email.localized)
         passwordTextField.setPlaceholder(Strings.password.localized)

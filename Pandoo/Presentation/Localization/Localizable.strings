@@ -23,3 +23,9 @@
 "weakPassword" = "";
 "empty_password_confirmation" = "";
 "non_matching_passwords" = "";
+"first_step_registration_title" = "Registration";
+"first_name" = "First name";
+"last_name" = "Last name";
+"phone" = "Phone";
+"address" = "Address";
+"next" = "Next";
