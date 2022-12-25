@@ -30,6 +30,7 @@ public final class FirstStepRegistrationViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        configureTextFields()
     }
     
     private func configureLayout() {
@@ -42,8 +43,67 @@ public final class FirstStepRegistrationViewController: UIViewController {
         nextButton.isEnabled = false
     }
     
+    private func configureTextFields() {
+        firstNameTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+        lastNameTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+        phoneTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+        addressTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+    }
+    
     @IBAction private func didTapNextButton() {
+        viewModel.firstName = firstNameTextField.text
+        viewModel.lastName = lastNameTextField.text
+        viewModel.phone = phoneTextField.text
+        viewModel.address = addressTextField.text
         onNext(viewModel, navigationController)
+    }
+    
+    @objc private func didChangeEditing() {
+        validateInput()
+    }
+    
+    private func validateInput() {
+        do {
+            try viewModel.validate(firstName: firstNameTextField.text)
+            try viewModel.validate(lastName: lastNameTextField.text)
+            try viewModel.validate(phone: phoneTextField.text)
+            try viewModel.validate(address: addressTextField.text)
+            nextButton.isEnabled = true
+        } catch {
+            nextButton.isEnabled = false
+        }
+    }
+    
+    private func validateFirstName(from firstName: String?) {
+        do {
+            try viewModel.validate(firstName: firstName)
+        } catch {
+            firstNameTextField.setMessage(error.localizedDescription)
+        }
+    }
+    
+    private func validateLastName(from lastName: String?) {
+        do {
+            try viewModel.validate(lastName: lastName)
+        } catch {
+            lastNameTextField.setMessage(error.localizedDescription)
+        }
+    }
+    
+    private func validatePhone(from phone: String?) {
+        do {
+            try viewModel.validate(phone: phone)
+        } catch {
+            phoneTextField.setMessage(error.localizedDescription)
+        }
+    }
+    
+    private func validateAddress(from address: String?) {
+        do {
+            try viewModel.validate(address: address)
+        } catch {
+            addressTextField.setMessage(error.localizedDescription)
+        }
     }
 }
 
@@ -60,5 +120,17 @@ extension FirstStepRegistrationViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == firstNameTextField {
+            validateFirstName(from: firstNameTextField.text)
+        } else if textField == lastNameTextField {
+            validateLastName(from: lastNameTextField.text)
+        } else if textField == phoneTextField {
+            validatePhone(from: phoneTextField.text)
+        } else {
+            validateAddress(from: addressTextField.text)
+        }
     }
 }

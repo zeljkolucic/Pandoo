@@ -29,6 +29,7 @@ public final class SecondStepRegistrationViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        configureTextFields()
     }
     
     private func configureLayout() {
@@ -41,7 +42,51 @@ public final class SecondStepRegistrationViewController: UIViewController {
     }
     
     @IBAction private func didTapSubmitButton() {
+        viewModel.email = emailTextField.text
+        viewModel.password = passwordTextField.text
         onSubmit(navigationController)
+    }
+    
+    private func configureTextFields() {
+        emailTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+        confirmPasswordTextField.addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
+    }
+    
+    @objc private func didChangeEditing() {
+        validateInput()
+    }
+    
+    private func validateInput() {
+        do {
+            try viewModel.validate(email: emailTextField.text)
+            try viewModel.validate(password: passwordTextField.text)
+            submitButton.isEnabled = confirmPasswordTextField.text == passwordTextField.text
+        } catch {
+            submitButton.isEnabled = false
+        }
+    }
+    
+    private func validateEmail(from email: String?) {
+        do {
+            try viewModel.validate(email: email)
+        } catch {
+            emailTextField.setMessage(error.localizedDescription)
+        }
+    }
+    
+    private func validatePassword(from password: String?) {
+        do {
+            try viewModel.validate(password: password)
+        } catch {
+            passwordTextField.setMessage(error.localizedDescription)
+        }
+    }
+    
+    private func validatePasswordConfirmation(from passwordConfirmation: String?) {
+        if confirmPasswordTextField.text != passwordTextField.text {
+            confirmPasswordTextField.setMessage(Strings.nonMatchingPasswords.localized)
+        }
     }
 }
 
@@ -56,5 +101,15 @@ extension SecondStepRegistrationViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            validateEmail(from: emailTextField.text)
+        } else if textField == passwordTextField {
+            validatePassword(from: passwordTextField.text)
+        } else {
+            validatePasswordConfirmation(from: confirmPasswordTextField.text)
+        }
     }
 }
