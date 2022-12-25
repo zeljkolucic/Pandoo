@@ -239,7 +239,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-SM-Gu1" customClass="RoundedButton" customModule="Pandoo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-SM-Gu1" customClass="RoundedButton" customModule="Pandoo" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="350" width="333" height="60"/>
                                                 <color key="backgroundColor" name="Primary Green"/>
                                                 <constraints>
@@ -293,11 +293,28 @@
                         <outlet property="lastNameTextField" destination="uku-Vg-NR2" id="AVH-G2-53h"/>
                         <outlet property="nextButton" destination="5J9-SM-Gu1" id="XtY-vx-ndx"/>
                         <outlet property="phoneTextField" destination="t8d-8S-cog" id="HlD-SU-CEi"/>
+                        <segue destination="uMv-dD-t9o" kind="show" identifier="FirstToSecondStepRegistrationSegue" id="BtW-XE-0dk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-TJ-SSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.5419847328244" y="-27.464788732394368"/>
+        </scene>
+        <!--Second Step Registration View Controller-->
+        <scene sceneID="5qU-CI-yPR">
+            <objects>
+                <viewController storyboardIdentifier="SecondStepRegistrationViewController" id="uMv-dD-t9o" customClass="SecondStepRegistrationViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeL-7k-ibB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oTX-OZ-Kr1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="198-Fg-vcE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqJ-92-I2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="-27"/>
         </scene>
     </scenes>
     <resources>

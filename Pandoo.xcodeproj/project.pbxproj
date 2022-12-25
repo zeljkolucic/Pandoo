@@ -28,6 +28,7 @@
 		E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */; };
 		E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */; };
 		E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397C32955147700DDAF53 /* RegistrationComposer.swift */; };
+		E42397C62958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397C52958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E42397BF29550EAD00DDAF53 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepRegistrationViewController.swift; sourceTree = "<group>"; };
 		E42397C32955147700DDAF53 /* RegistrationComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationComposer.swift; sourceTree = "<group>"; };
+		E42397C52958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepRegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				E42397A0295503BF00DDAF53 /* LoginViewController.swift */,
 				E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */,
+				E42397C52958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
 				E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */,
 				E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */,
+				E42397C62958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,

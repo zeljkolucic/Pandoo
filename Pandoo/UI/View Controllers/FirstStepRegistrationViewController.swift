@@ -15,9 +15,11 @@ public final class FirstStepRegistrationViewController: UIViewController {
     @IBOutlet private weak var nextButton: RoundedButton!
     
     private let viewModel: RegistrationViewModel
+    private let onNext: (RegistrationViewModel, UINavigationController?) -> ()
     
-    public init?(coder: NSCoder, viewModel: RegistrationViewModel) {
+    public init?(coder: NSCoder, viewModel: RegistrationViewModel, onNext: @escaping (RegistrationViewModel, UINavigationController?) -> ()) {
         self.viewModel = viewModel
+        self.onNext = onNext
         super.init(coder: coder)
     }
     
@@ -40,7 +42,7 @@ public final class FirstStepRegistrationViewController: UIViewController {
     }
     
     @IBAction private func didTapNextButton() {
-        
+        onNext(viewModel, navigationController)
     }
 }
 
