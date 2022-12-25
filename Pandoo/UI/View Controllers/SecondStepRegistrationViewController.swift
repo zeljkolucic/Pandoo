@@ -8,6 +8,11 @@
 import UIKit
 
 public final class SecondStepRegistrationViewController: UIViewController {
+    @IBOutlet private weak var emailTextField: RoundedTextField!
+    @IBOutlet private weak var passwordTextField: PasswordTextField!
+    @IBOutlet private weak var confirmPasswordTextField: PasswordTextField!
+    @IBOutlet private weak var submitButton: RoundedButton!
+    
     private let viewModel: RegistrationViewModel
     private let onSubmit: (UINavigationController?) -> Void
     
@@ -28,5 +33,23 @@ public final class SecondStepRegistrationViewController: UIViewController {
     
     private func configureLayout() {
         
+    }
+    
+    @IBAction private func didTapSubmitButton() {
+        onSubmit(navigationController)
+    }
+}
+
+extension SecondStepRegistrationViewController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            confirmPasswordTextField.becomeFirstResponder()
+        } else {
+            confirmPasswordTextField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
