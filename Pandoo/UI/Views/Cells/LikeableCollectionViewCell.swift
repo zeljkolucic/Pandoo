@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AnimalCollectionViewCell: UICollectionViewCell {
+class LikeableCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var likeButton: UIButton!
     @IBOutlet private(set) weak var imageView: UIImageView!
     @IBOutlet private(set) weak var titleLabel: UILabel!

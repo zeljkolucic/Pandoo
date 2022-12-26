@@ -48,13 +48,15 @@ public final class HomeViewController: UIViewController {
     }
     
     private func configureCollectionView() {
+        ticketsCollectionView.register(TicketCollectionViewCell.self)
         ticketsCollectionView.delegate = self
         ticketsCollectionView.dataSource = self
         
+        eventsCollectionView.register(LikeableCollectionViewCell.self)
         eventsCollectionView.delegate = self
         eventsCollectionView.dataSource = self
         
-        animalsCollectionView.register(AnimalCollectionViewCell.self)
+        animalsCollectionView.register(LikeableCollectionViewCell.self)
         animalsCollectionView.delegate = self
         animalsCollectionView.dataSource = self
     }
@@ -71,9 +73,9 @@ public final class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == ticketsCollectionView {
-            return 0
+            return 2
         } else if collectionView == eventsCollectionView {
-            return 0
+            return 5
         } else {
             return 5
         }
@@ -81,11 +83,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == ticketsCollectionView {
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
+                return UICollectionViewCell()
+            }
+            
+            return cell
+            
         } else if collectionView == eventsCollectionView {
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(LikeableCollectionViewCell.self, indexPath: indexPath) else {
+                return UICollectionViewCell()
+            }
+            
+            return cell
+            
         } else {
-            guard let cell = collectionView.dequeueReusableCell(AnimalCollectionViewCell.self, indexPath: indexPath) else {
+            guard let cell = collectionView.dequeueReusableCell(LikeableCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
             

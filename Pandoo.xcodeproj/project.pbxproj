@@ -49,9 +49,11 @@
 		E42397EC29598F6E00DDAF53 /* NotificationComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397EB29598F6E00DDAF53 /* NotificationComposer.swift */; };
 		E42397EE29598F9E00DDAF53 /* ProfileComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397ED29598F9E00DDAF53 /* ProfileComposer.swift */; };
 		E42397F029598FC500DDAF53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397EF29598FC500DDAF53 /* ProfileViewController.swift */; };
-		E42397F32959A3FC00DDAF53 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */; };
-		E42397F42959A3FC00DDAF53 /* AnimalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */; };
+		E42397F32959A3FC00DDAF53 /* LikeableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F12959A3FC00DDAF53 /* LikeableCollectionViewCell.swift */; };
+		E42397F42959A3FC00DDAF53 /* LikeableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397F22959A3FC00DDAF53 /* LikeableCollectionViewCell.xib */; };
 		E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F62959A63D00DDAF53 /* UICollectionView+.swift */; };
+		E42397FA2959B0FC00DDAF53 /* TicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */; };
+		E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,9 +101,11 @@
 		E42397EB29598F6E00DDAF53 /* NotificationComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationComposer.swift; sourceTree = "<group>"; };
 		E42397ED29598F9E00DDAF53 /* ProfileComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComposer.swift; sourceTree = "<group>"; };
 		E42397EF29598FC500DDAF53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
-		E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCollectionViewCell.xib; sourceTree = "<group>"; };
+		E42397F12959A3FC00DDAF53 /* LikeableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeableCollectionViewCell.swift; sourceTree = "<group>"; };
+		E42397F22959A3FC00DDAF53 /* LikeableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeableCollectionViewCell.xib; sourceTree = "<group>"; };
 		E42397F62959A63D00DDAF53 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,8 +270,10 @@
 		E42397F52959A40100DDAF53 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */,
-				E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */,
+				E42397F12959A3FC00DDAF53 /* LikeableCollectionViewCell.swift */,
+				E42397F22959A3FC00DDAF53 /* LikeableCollectionViewCell.xib */,
+				E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */,
+				E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -331,9 +337,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42397942954C82600DDAF53 /* LaunchScreen.storyboard in Resources */,
-				E42397F42959A3FC00DDAF53 /* AnimalCollectionViewCell.xib in Resources */,
+				E42397F42959A3FC00DDAF53 /* LikeableCollectionViewCell.xib in Resources */,
 				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
+				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
+				E42397FA2959B0FC00DDAF53 /* TicketCollectionViewCell.swift in Sources */,
 				E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */,
 				E42397C829590C0200DDAF53 /* HomeViewController.swift in Sources */,
 				E42397CA29590E4600DDAF53 /* HomeViewModel.swift in Sources */,
@@ -359,7 +367,7 @@
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
-				E42397F32959A3FC00DDAF53 /* AnimalCollectionViewCell.swift in Sources */,
+				E42397F32959A3FC00DDAF53 /* LikeableCollectionViewCell.swift in Sources */,
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
 				E42397D02959866300DDAF53 /* EventsViewController.swift in Sources */,
