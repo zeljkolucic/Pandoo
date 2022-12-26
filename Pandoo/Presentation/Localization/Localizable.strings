@@ -32,3 +32,9 @@
 "second_step_registration_title" = "Registration";
 "confirm_password" = "Confirm password";
 "submit" = "Submit";
+"home_title" = "Home";
+"tickets_title" = "Tickets";
+"notifications_title" = "Notifications";
+"profile_title" = "Profile";
+"events_title" = "Events";
+"animals_title" = "Animals";

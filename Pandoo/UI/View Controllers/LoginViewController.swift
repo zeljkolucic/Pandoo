@@ -17,10 +17,12 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private weak var registerButton: RoundedButton!
     
     private let viewModel: LoginViewModel
+    private let onLogin: (UIViewController) -> ()
     private let onRegister: (UINavigationController?) -> ()
     
-    init?(coder: NSCoder, viewModel: LoginViewModel, onRegister: @escaping (UINavigationController?) -> ()) {
+    init?(coder: NSCoder, viewModel: LoginViewModel, onLogin: @escaping (UIViewController) -> (), onRegister: @escaping (UINavigationController?) -> ()) {
         self.viewModel = viewModel
+        self.onLogin = onLogin
         self.onRegister = onRegister
         super.init(coder: coder)
     }
@@ -47,7 +49,12 @@ public final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapLoginButton() {
-        loginButton.showLoading()
+        UIView.animate(withDuration: 0.5) {
+            self.loginButton.showLoading()
+        } completion: { _ in
+            self.loginButton.hideLoading()
+            self.onLogin(self)
+        }
     }
     
     @IBAction private func didTapRegisterButton() {

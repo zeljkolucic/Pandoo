@@ -170,6 +170,7 @@
                         <outlet property="registerButton" destination="Dh2-dK-2cu" id="axl-hL-y6K"/>
                         <outlet property="titleLabel" destination="jeO-HY-VXO" id="l36-9q-Ln2"/>
                         <segue destination="rIT-Tv-wDL" kind="show" identifier="LoginToFirstStepRegistrationSegue" id="xh5-yk-Hwg"/>
+                        <segue destination="a7C-JO-6eQ" kind="presentation" identifier="LoginToTabBarSegue" id="wzI-CN-IAZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -299,6 +300,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-TJ-SSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.5419847328244" y="-27.464788732394368"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="pY3-9f-jsI">
+            <objects>
+                <viewController storyboardIdentifier="TicketsViewController" id="ZUw-UB-lYA" customClass="TicketsViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1GR-bI-YFe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lA6-kt-HCd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="vRL-AF-jvV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkE-BY-leX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="1371"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dLC-R8-8ZE">
+            <objects>
+                <viewController storyboardIdentifier="NotificationsViewController" id="mFP-1w-JXf" customClass="NotificationsViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SQQ-Cm-XAk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gnm-Xx-Np7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="wjM-d5-ezf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijQ-8d-V3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="2070"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="iCX-cs-BVm">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="nxD-DI-UMl" customClass="ProfileViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hCg-Sb-VFO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TN2-h7-im3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Wzf-jJ-kSZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9SR-59-YPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="2768"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="xHo-Hh-Gqh">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="i7v-If-EBV" customClass="HomeViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k9F-lS-A0u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NWe-sA-6G1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="xmy-bv-3qX"/>
+                    <connections>
+                        <segue destination="KzR-TA-AkE" kind="show" identifier="HomeToEventsSegue" id="ZFy-yr-C48"/>
+                        <segue destination="dAs-Cy-x6P" kind="show" identifier="HomeToAnimalsSegue" id="o1R-MA-tkE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nR9-Tg-Jbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="687"/>
+        </scene>
+        <!--Events View Controller-->
+        <scene sceneID="bxt-R4-DqC">
+            <objects>
+                <viewController storyboardIdentifier="EventsViewController" id="KzR-TA-AkE" customClass="EventsViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xtx-Qu-Fi9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wjj-qh-0CT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IDq-mK-Io8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec9-BP-hZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="687"/>
+        </scene>
+        <!--Animals View Controller-->
+        <scene sceneID="kf7-w0-ZzQ">
+            <objects>
+                <viewController storyboardIdentifier="AnimalsViewController" id="dAs-Cy-x6P" customClass="AnimalsViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6i-3z-AGR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="d7h-qm-VWW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYR-6f-zoX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdr-vm-8Ut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3590" y="687"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hgk-hH-DJm">
+            <objects>
+                <tabBarController id="a7C-JO-6eQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kMX-f5-syC"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CG5-T1-ZQD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="i7v-If-EBV" kind="relationship" relationship="viewControllers" id="RXg-9X-4qV"/>
+                        <segue destination="ZUw-UB-lYA" kind="relationship" relationship="viewControllers" id="bOZ-bQ-3hk"/>
+                        <segue destination="mFP-1w-JXf" kind="relationship" relationship="viewControllers" id="ob5-kV-HCh"/>
+                        <segue destination="nxD-DI-UMl" kind="relationship" relationship="viewControllers" id="Z7z-os-mjv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIB-F1-J55" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="990"/>
         </scene>
         <!--Second Step Registration View Controller-->
         <scene sceneID="5qU-CI-yPR">

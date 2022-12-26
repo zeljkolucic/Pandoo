@@ -34,4 +34,10 @@ public struct Strings {
     public static let secondStepRegistrationTitle = "second_step_registration_title"
     public static let confirmPassword = "confirm_password"
     public static let submit = "submit"
+    public static let homeTitle = "home_title"
+    public static let ticketsTitle = "tickets_title"
+    public static let notificationsTitle = "notifications_title"
+    public static let profileTitle = "profile_title"
+    public static let eventsTitle = "events_title"
+    public static let animalsTitle = "animals_title"
 }
