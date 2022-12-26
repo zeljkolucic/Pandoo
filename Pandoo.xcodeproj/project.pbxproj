@@ -54,6 +54,9 @@
 		E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F62959A63D00DDAF53 /* UICollectionView+.swift */; };
 		E42397FA2959B0FC00DDAF53 /* TicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */; };
 		E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */; };
+		E42397FE2959B81400DDAF53 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */; };
+		E42397FF2959B81400DDAF53 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */; };
+		E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42398002959B8C800DDAF53 /* UITableView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,9 @@
 		E42397F62959A63D00DDAF53 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCollectionViewCell.swift; sourceTree = "<group>"; };
 		E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCollectionViewCell.xib; sourceTree = "<group>"; };
+		E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
+		E42398002959B8C800DDAF53 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 				E42397AE295506E500DDAF53 /* UIColor+.swift */,
 				E42397B529550AEE00DDAF53 /* String+.swift */,
 				E42397F62959A63D00DDAF53 /* UICollectionView+.swift */,
+				E42398002959B8C800DDAF53 /* UITableView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +281,8 @@
 				E42397F22959A3FC00DDAF53 /* LikeableCollectionViewCell.xib */,
 				E42397F82959B0FC00DDAF53 /* TicketCollectionViewCell.swift */,
 				E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */,
+				E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */,
+				E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 			files = (
 				E42397942954C82600DDAF53 /* LaunchScreen.storyboard in Resources */,
 				E42397F42959A3FC00DDAF53 /* LikeableCollectionViewCell.xib in Resources */,
+				E42397FF2959B81400DDAF53 /* AnimalTableViewCell.xib in Resources */,
 				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
@@ -363,10 +373,12 @@
 				E42397C62958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
 				E42397E829598CF400DDAF53 /* NotificationsViewController.swift in Sources */,
+				E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */,
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
+				E42397FE2959B81400DDAF53 /* AnimalTableViewCell.swift in Sources */,
 				E42397F32959A3FC00DDAF53 /* LikeableCollectionViewCell.swift in Sources */,
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
