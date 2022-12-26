@@ -49,7 +49,7 @@ public final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapLoginButton() {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.3) {
             self.loginButton.showLoading()
         } completion: { _ in
             self.loginButton.hideLoading()

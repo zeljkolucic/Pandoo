@@ -49,6 +49,9 @@
 		E42397EC29598F6E00DDAF53 /* NotificationComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397EB29598F6E00DDAF53 /* NotificationComposer.swift */; };
 		E42397EE29598F9E00DDAF53 /* ProfileComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397ED29598F9E00DDAF53 /* ProfileComposer.swift */; };
 		E42397F029598FC500DDAF53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397EF29598FC500DDAF53 /* ProfileViewController.swift */; };
+		E42397F32959A3FC00DDAF53 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */; };
+		E42397F42959A3FC00DDAF53 /* AnimalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */; };
+		E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397F62959A63D00DDAF53 /* UICollectionView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		E42397EB29598F6E00DDAF53 /* NotificationComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationComposer.swift; sourceTree = "<group>"; };
 		E42397ED29598F9E00DDAF53 /* ProfileComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComposer.swift; sourceTree = "<group>"; };
 		E42397EF29598FC500DDAF53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
+		E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCollectionViewCell.xib; sourceTree = "<group>"; };
+		E42397F62959A63D00DDAF53 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +237,7 @@
 				E42397A92955043B00DDAF53 /* UIViewController+className.swift */,
 				E42397AE295506E500DDAF53 /* UIColor+.swift */,
 				E42397B529550AEE00DDAF53 /* String+.swift */,
+				E42397F62959A63D00DDAF53 /* UICollectionView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				E42397AC2955053100DDAF53 /* RoundedTextField.swift */,
 				E42397B929550D6800DDAF53 /* PasswordTextField.swift */,
 				E42397BB29550DEA00DDAF53 /* LoadingButton.swift */,
+				E42397F52959A40100DDAF53 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +261,15 @@
 				E42397B32955095D00DDAF53 /* Strings.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		E42397F52959A40100DDAF53 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E42397F12959A3FC00DDAF53 /* AnimalCollectionViewCell.swift */,
+				E42397F22959A3FC00DDAF53 /* AnimalCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42397942954C82600DDAF53 /* LaunchScreen.storyboard in Resources */,
+				E42397F42959A3FC00DDAF53 /* AnimalCollectionViewCell.xib in Resources */,
 				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
@@ -341,6 +359,7 @@
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
+				E42397F32959A3FC00DDAF53 /* AnimalCollectionViewCell.swift in Sources */,
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
 				E42397D02959866300DDAF53 /* EventsViewController.swift in Sources */,
@@ -360,6 +379,7 @@
 				E42397CC29590ED600DDAF53 /* MainTabBarController.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
+				E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */,
 				E42397DE2959885000DDAF53 /* MainComposer.swift in Sources */,
 				E42397D82959880200DDAF53 /* HomeComposer.swift in Sources */,
 				E42397E429598C7400DDAF53 /* NotificationsViewModel.swift in Sources */,
