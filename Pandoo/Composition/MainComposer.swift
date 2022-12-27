@@ -14,7 +14,7 @@ public final class MainComposer {
     }
     
     private static func viewControllers() -> [UIViewController] {
-        return [homeViewControllerEmbeddedInNavigationController(), ticketsViewController(), notificationsViewControllerEmbeddedInNavigationController(), profileViewController()]
+        return [homeViewControllerEmbeddedInNavigationController(), ticketsViewControllerEmbeddedInNavigationController(), notificationsViewControllerEmbeddedInNavigationController(), profileViewControllerEmbeddedInNavigationController()]
     }
     
     private static func homeViewControllerEmbeddedInNavigationController() -> UINavigationController {
@@ -29,7 +29,7 @@ public final class MainComposer {
         return UINavigationController(rootViewController: viewController)
     }
     
-    private static func ticketsViewController() -> UIViewController {
+    private static func ticketsViewControllerEmbeddedInNavigationController() -> UINavigationController {
         let title = Strings.ticketsTitle.localized
         let image = UIImage(systemName: "ticket")
         let selectedImage = UIImage(systemName: "ticket.fill")
@@ -38,7 +38,7 @@ public final class MainComposer {
         viewController.title = title
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }
     
     private static func notificationsViewControllerEmbeddedInNavigationController() -> UINavigationController {
@@ -53,7 +53,7 @@ public final class MainComposer {
         return UINavigationController(rootViewController: viewController)
     }
     
-    private static func profileViewController() -> UIViewController {
+    private static func profileViewControllerEmbeddedInNavigationController() -> UINavigationController {
         let title = Strings.profileTitle.localized
         let image = UIImage(systemName: "person")
         let selectedImage = UIImage(systemName: "person.fill")
@@ -62,6 +62,6 @@ public final class MainComposer {
         viewController.title = title
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }
 }
