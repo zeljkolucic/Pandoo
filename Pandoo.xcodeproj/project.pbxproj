@@ -59,6 +59,8 @@
 		E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42398002959B8C800DDAF53 /* UITableView+.swift */; };
 		E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239802295B99C700DDAF53 /* EventTableViewCell.swift */; };
 		E4239805295B99C700DDAF53 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239803295B99C700DDAF53 /* EventTableViewCell.xib */; };
+		E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */; };
+		E4239809295B9E0800DDAF53 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		E42398002959B8C800DDAF53 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		E4239802295B99C700DDAF53 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		E4239803295B99C700DDAF53 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +293,8 @@
 				E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */,
 				E4239802295B99C700DDAF53 /* EventTableViewCell.swift */,
 				E4239803295B99C700DDAF53 /* EventTableViewCell.xib */,
+				E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */,
+				E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
+				E4239809295B9E0800DDAF53 /* NotificationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +412,7 @@
 				E42397F029598FC500DDAF53 /* ProfileViewController.swift in Sources */,
 				E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */,
 				E42397CC29590ED600DDAF53 /* MainTabBarController.swift in Sources */,
+				E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
 				E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */,

@@ -324,10 +324,29 @@
                     <view key="view" contentMode="scaleToFill" id="SQQ-Cm-XAk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XFl-69-hdz">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mFP-1w-JXf" id="HGr-6r-Qww"/>
+                                    <outlet property="delegate" destination="mFP-1w-JXf" id="o1M-dk-7dL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gnm-Xx-Np7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XFl-69-hdz" firstAttribute="leading" secondItem="gnm-Xx-Np7" secondAttribute="leading" id="1HC-nb-LAM"/>
+                            <constraint firstItem="gnm-Xx-Np7" firstAttribute="bottom" secondItem="XFl-69-hdz" secondAttribute="bottom" id="NUy-SY-oXl"/>
+                            <constraint firstItem="gnm-Xx-Np7" firstAttribute="trailing" secondItem="XFl-69-hdz" secondAttribute="trailing" id="lyf-1y-7yg"/>
+                            <constraint firstItem="XFl-69-hdz" firstAttribute="top" secondItem="gnm-Xx-Np7" secondAttribute="top" id="tZM-ap-Ur0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="wjM-d5-ezf"/>
+                    <connections>
+                        <outlet property="tableView" destination="XFl-69-hdz" id="6iP-SO-5Xo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijQ-8d-V3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
