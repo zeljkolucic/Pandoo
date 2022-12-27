@@ -28,7 +28,7 @@ public final class AnimalsViewController: UIViewController {
     }
     
     private func configureLayout() {
-        
+        navigationItem.title = Strings.animalsTitle.localized
     }
     
     private func configureTableView() {

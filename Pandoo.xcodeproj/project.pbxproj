@@ -57,6 +57,8 @@
 		E42397FE2959B81400DDAF53 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */; };
 		E42397FF2959B81400DDAF53 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */; };
 		E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42398002959B8C800DDAF53 /* UITableView+.swift */; };
+		E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239802295B99C700DDAF53 /* EventTableViewCell.swift */; };
+		E4239805295B99C700DDAF53 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239803295B99C700DDAF53 /* EventTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,8 @@
 		E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		E42398002959B8C800DDAF53 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		E4239802295B99C700DDAF53 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		E4239803295B99C700DDAF53 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +287,8 @@
 				E42397F92959B0FC00DDAF53 /* TicketCollectionViewCell.xib */,
 				E42397FC2959B81400DDAF53 /* AnimalTableViewCell.swift */,
 				E42397FD2959B81400DDAF53 /* AnimalTableViewCell.xib */,
+				E4239802295B99C700DDAF53 /* EventTableViewCell.swift */,
+				E4239803295B99C700DDAF53 /* EventTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				E42397F42959A3FC00DDAF53 /* LikeableCollectionViewCell.xib in Resources */,
 				E42397FF2959B81400DDAF53 /* AnimalTableViewCell.xib in Resources */,
 				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
+				E4239805295B99C700DDAF53 /* EventTableViewCell.xib in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
@@ -374,6 +381,7 @@
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
 				E42397E829598CF400DDAF53 /* NotificationsViewController.swift in Sources */,
 				E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */,
+				E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */,
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,

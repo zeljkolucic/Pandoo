@@ -44,16 +44,16 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-aR-Zy2">
-                        <rect key="frame" x="227.66666666666666" y="35.666666666666664" width="72.333333333333343" height="25"/>
+                        <rect key="frame" x="226" y="35.666666666666664" width="74" height="25"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaH-BF-HUb">
-                                <rect key="frame" x="0.0" y="1" width="45.333333333333336" height="23"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <rect key="frame" x="0.0" y="0.3333333333333357" width="47" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBt-lh-kqh">
-                                <rect key="frame" x="47.333333333333343" y="0.0" width="25" height="25"/>
+                                <rect key="frame" x="49" y="0.0" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="gIf-so-JMy"/>
                                     <constraint firstAttribute="width" constant="25" id="nOT-Wt-KBk"/>
