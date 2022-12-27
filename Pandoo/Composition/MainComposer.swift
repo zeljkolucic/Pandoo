@@ -14,7 +14,7 @@ public final class MainComposer {
     }
     
     private static func viewControllers() -> [UIViewController] {
-        return [homeViewControllerEmbeddedInNavigationController(), ticketsViewController(), notificationsViewController(), profileViewController()]
+        return [homeViewControllerEmbeddedInNavigationController(), ticketsViewController(), notificationsViewControllerEmbeddedInNavigationController(), profileViewController()]
     }
     
     private static func homeViewControllerEmbeddedInNavigationController() -> UINavigationController {
@@ -41,7 +41,7 @@ public final class MainComposer {
         return viewController
     }
     
-    private static func notificationsViewController() -> UIViewController {
+    private static func notificationsViewControllerEmbeddedInNavigationController() -> UINavigationController {
         let title = Strings.notificationsTitle.localized
         let image = UIImage(systemName: "bell")
         let selectedImage = UIImage(systemName: "bell.fill")
@@ -50,7 +50,7 @@ public final class MainComposer {
         viewController.title = title
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }
     
     private static func profileViewController() -> UIViewController {
