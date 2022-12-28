@@ -34,11 +34,20 @@ public final class ProfileViewController: UIViewController {
         observation = tableView.observe(\.contentSize) { tableView, _ in
             self.tableViewHeightConstraint.constant = tableView.contentSize.height
         }
+        
+        getUser()
     }
     
     private func configureLayout() {
         navigationItem.title = Strings.profileTitle.localized
-        titleLabel.text = "Hi, \(viewModel.firstName!) \(viewModel.lastName!)!"
+    }
+    
+    private func getUser() {
+        if let firstName = viewModel.firstName, let lastName = viewModel.lastName {
+            let title = Strings.greetingTitle.localized
+            titleLabel.text = String(format: title, firstName, lastName)
+        }
+        
         emailLabel.text = viewModel.email
     }
     
