@@ -122,12 +122,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ProfileViewController: Selectable {
     func didSelectFirstName() {
-        let viewController = EditFirstViewController(viewModel: viewModel)
+        let viewController = EditFirstNameViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectLastName() {
-        
+        let viewController = EditLastNameViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectPhone() {

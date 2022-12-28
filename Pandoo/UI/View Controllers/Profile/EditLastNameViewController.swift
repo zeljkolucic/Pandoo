@@ -1,5 +1,5 @@
 //
-//  EditFirstNameViewController.swift
+//  EditLastNameViewController.swift
 //  Pandoo
 //
 //  Created by Zeljko Lucic on 28.12.22..
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EditFirstNameViewController: UIViewController {
+final class EditLastNameViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(TextFieldTableViewCell.self, forCellReuseIdentifier: TextFieldTableViewCell.className)
@@ -41,7 +41,7 @@ final class EditFirstNameViewController: UIViewController {
     
     private func configureLayout() {
         view.backgroundColor = .white
-        navigationItem.title = Strings.firstName.localized
+        navigationItem.title = Strings.lastName.localized
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .done, target: self, action: #selector(didTapDoneButton))
         view.addSubview(tableView)
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -52,10 +52,10 @@ final class EditFirstNameViewController: UIViewController {
     
     @objc private func didTapDoneButton() {
         do {
-            try viewModel.changeFirstName(text)
+            try viewModel.changeLastName(text)
             navigationController?.popViewController(animated: true)
         } catch {
-            let title = Strings.emptyFirstName.localized
+            let title = Strings.emptyLastName.localized
             let action = UIAlertAction(title: Strings.ok.localized, style: .default)
             let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
             alertController.addAction(action)
@@ -64,7 +64,7 @@ final class EditFirstNameViewController: UIViewController {
     }
 }
 
-extension EditFirstNameViewController: UITableViewDelegate, UITableViewDataSource {
+extension EditLastNameViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -78,7 +78,7 @@ extension EditFirstNameViewController: UITableViewDelegate, UITableViewDataSourc
             return UITableViewCell()
         }
         
-        cell.text = viewModel.firstName
+        cell.text = viewModel.lastName
         
         return cell
     }

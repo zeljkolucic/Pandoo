@@ -66,6 +66,7 @@
 		E4239811295BB1A500DDAF53 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239810295BB1A500DDAF53 /* NSObject+className.swift */; };
 		E4239814295C353E00DDAF53 /* EditFirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */; };
 		E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */; };
+		E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		E4239810295BB1A500DDAF53 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
 		E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFirstNameViewController.swift; sourceTree = "<group>"; };
 		E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLastNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 			children = (
 				E42397EF29598FC500DDAF53 /* ProfileViewController.swift */,
 				E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */,
+				E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
 				E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */,
+				E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */,
 				E42397DE2959885000DDAF53 /* MainComposer.swift in Sources */,
 				E42397D82959880200DDAF53 /* HomeComposer.swift in Sources */,
 				E42397E429598C7400DDAF53 /* NotificationsViewModel.swift in Sources */,
