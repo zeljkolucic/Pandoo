@@ -28,7 +28,10 @@ public final class ProfileViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        
+        viewModel.selectable = self
+        viewModel.reloadable = self
+        
         configureLayout()
         configureTableView()
         observation = tableView.observe(\.contentSize) { tableView, _ in
@@ -40,6 +43,7 @@ public final class ProfileViewController: UIViewController {
     
     private func configureLayout() {
         navigationItem.title = Strings.profileTitle.localized
+        navigationController?.navigationBar.tintColor = .primaryGreen
     }
     
     private func getUser() {
@@ -118,7 +122,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ProfileViewController: Selectable {
     func didSelectFirstName() {
-        
+        let viewController = EditFirstViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectLastName() {
@@ -143,5 +148,11 @@ extension ProfileViewController: Selectable {
     
     func didSelectDeleteAccount() {
         
+    }
+}
+
+extension ProfileViewController: Reloadable {
+    func reload() {
+        tableView.reloadData()
     }
 }

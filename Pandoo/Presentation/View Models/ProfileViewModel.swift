@@ -46,28 +46,71 @@ protocol Selectable: NSObject {
     func didSelectDeleteAccount()
 }
 
+protocol Reloadable: NSObject {
+    func reload()
+}
+
 public final class ProfileViewModel {
-    weak var delegate: Selectable?
+    weak var selectable: Selectable?
+    weak var reloadable: Reloadable?
     
-    var email: String? = "zeljko.lucic99@gmail.com"
-    var firstName: String? = "Zeljko"
-    var lastName: String? = "Lucic"
-    var phone: String? = "+381641234567"
-    var address: String? = "Bulevar kralja Aleksandra 77"
+    var email: String? = "zeljko.lucic99@gmail.com" {
+        didSet { reloadable?.reload() }
+    }
+    
+    var firstName: String? = "Zeljko" {
+        didSet { reloadable?.reload() }
+    }
+    
+    var lastName: String? = "Lucic" {
+        didSet { reloadable?.reload() }
+    }
+    
+    var phone: String? = "+381641234567" {
+        didSet { reloadable?.reload() }
+    }
+    
+    var address: String? = "Bulevar kralja Aleksandra 77" {
+        didSet { reloadable?.reload() }
+    }
     
     var items: [Section] { [
         Section(items: [
-            DetailDisclosureItem(title: Strings.firstName.localized, detail: firstName, action: delegate?.didSelectFirstName),
-            DetailDisclosureItem(title: Strings.lastName.localized, detail: lastName, action: delegate?.didSelectLastName),
-            DetailDisclosureItem(title: Strings.phone.localized, detail: phone, action: delegate?.didSelectPhone),
-            DetailDisclosureItem(title: Strings.address.localized, detail: address, action: delegate?.didSelectAddress)
+            DetailDisclosureItem(title: Strings.firstName.localized, detail: firstName, action: selectable?.didSelectFirstName),
+            DetailDisclosureItem(title: Strings.lastName.localized, detail: lastName, action: selectable?.didSelectLastName),
+            DetailDisclosureItem(title: Strings.phone.localized, detail: phone, action: selectable?.didSelectPhone),
+            DetailDisclosureItem(title: Strings.address.localized, detail: address, action: selectable?.didSelectAddress)
         ]),
         Section(items: [
-            DisclosureItem(title: Strings.changePassword.localized, action: delegate?.didSelectChangePassword),
-            DisclosureItem(title: Strings.signOut.localized, action: delegate?.didSelectSignOut),
-            DestructiveItem(title: Strings.deleteAccount.localized, action: delegate?.didSelectDeleteAccount)
+            DisclosureItem(title: Strings.changePassword.localized, action: selectable?.didSelectChangePassword),
+            DisclosureItem(title: Strings.signOut.localized, action: selectable?.didSelectSignOut),
+            DestructiveItem(title: Strings.deleteAccount.localized, action: selectable?.didSelectDeleteAccount)
         ], footer: Strings.deleteAccountDescription.localized)
     ] }
+    
+    func changeFirstName(_ firstName: String?) throws {
+        try Validator.validate(firstName, against: .firstName)
+        self.firstName = firstName
+    }
+    
+    func changeLastName(_ lastName: String?) throws {
+        try Validator.validate(lastName, against: .lastName)
+        self.lastName = lastName
+    }
+    
+    func changePhone(_ phone: String?) throws {
+        try Validator.validate(phone, against: .phone)
+        self.phone = phone
+    }
+    
+    func changeAddress(_ address: String?) throws {
+        try Validator.validate(address, against: .address)
+        self.address = address
+    }
+    
+    func changePassword(_ oldPassword: String?, _ newPassword: String?) throws {
+        try Validator.validate(newPassword, against: .password)
+    }
 }
 
 

@@ -43,3 +43,4 @@
 "delete_account" = "Delete account";
 "delete_account_description" = "By deleting your account you will lose all your data. However, the tickets you bought will still be available in your mail.";
 "greeting_title" = "Hi, %@ %@!";
+"ok" = "OK";

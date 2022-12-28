@@ -45,4 +45,5 @@ public struct Strings {
     public static let deleteAccount = "delete_account"
     public static let deleteAccountDescription = "delete_account_description"
     public static let greetingTitle = "greeting_title"
+    public static let ok = "ok"
 }
