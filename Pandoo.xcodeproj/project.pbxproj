@@ -15,7 +15,6 @@
 		E423979F2954C8A500DDAF53 /* LoginComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423979E2954C8A500DDAF53 /* LoginComposer.swift */; };
 		E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397A0295503BF00DDAF53 /* LoginViewController.swift */; };
 		E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397A4295503EA00DDAF53 /* LoginViewModel.swift */; };
-		E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397A92955043B00DDAF53 /* UIViewController+className.swift */; };
 		E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397AC2955053100DDAF53 /* RoundedTextField.swift */; };
 		E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397AE295506E500DDAF53 /* UIColor+.swift */; };
 		E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42397B02955085D00DDAF53 /* RoundedButton.swift */; };
@@ -61,6 +60,10 @@
 		E4239805295B99C700DDAF53 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239803295B99C700DDAF53 /* EventTableViewCell.xib */; };
 		E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */; };
 		E4239809295B9E0800DDAF53 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */; };
+		E423980B295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423980A295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift */; };
+		E423980D295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423980C295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift */; };
+		E423980F295BAAB100DDAF53 /* DestructiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423980E295BAAB100DDAF53 /* DestructiveTableViewCell.swift */; };
+		E4239811295BB1A500DDAF53 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239810295BB1A500DDAF53 /* NSObject+className.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +77,6 @@
 		E423979E2954C8A500DDAF53 /* LoginComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComposer.swift; sourceTree = "<group>"; };
 		E42397A0295503BF00DDAF53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E42397A4295503EA00DDAF53 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		E42397A92955043B00DDAF53 /* UIViewController+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+className.swift"; sourceTree = "<group>"; };
 		E42397AC2955053100DDAF53 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E42397AE295506E500DDAF53 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		E42397B02955085D00DDAF53 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -120,6 +122,10 @@
 		E4239803295B99C700DDAF53 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		E423980A295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDisclosureTableViewCell.swift; sourceTree = "<group>"; };
+		E423980C295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureIndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		E423980E295BAAB100DDAF53 /* DestructiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestructiveTableViewCell.swift; sourceTree = "<group>"; };
+		E4239810295BB1A500DDAF53 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,11 +258,11 @@
 		E42397A82955042A00DDAF53 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E42397A92955043B00DDAF53 /* UIViewController+className.swift */,
 				E42397AE295506E500DDAF53 /* UIColor+.swift */,
 				E42397B529550AEE00DDAF53 /* String+.swift */,
 				E42397F62959A63D00DDAF53 /* UICollectionView+.swift */,
 				E42398002959B8C800DDAF53 /* UITableView+.swift */,
+				E4239810295BB1A500DDAF53 /* NSObject+className.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +301,9 @@
 				E4239803295B99C700DDAF53 /* EventTableViewCell.xib */,
 				E4239806295B9E0800DDAF53 /* NotificationTableViewCell.swift */,
 				E4239807295B9E0800DDAF53 /* NotificationTableViewCell.xib */,
+				E423980A295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift */,
+				E423980C295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift */,
+				E423980E295BAAB100DDAF53 /* DestructiveTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -378,7 +387,6 @@
 			files = (
 				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
 				E42397FA2959B0FC00DDAF53 /* TicketCollectionViewCell.swift in Sources */,
-				E42397AA2955043B00DDAF53 /* UIViewController+className.swift in Sources */,
 				E42397C829590C0200DDAF53 /* HomeViewController.swift in Sources */,
 				E42397CA29590E4600DDAF53 /* HomeViewModel.swift in Sources */,
 				E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */,
@@ -390,6 +398,7 @@
 				E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */,
 				E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */,
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
+				E423980F295BAAB100DDAF53 /* DestructiveTableViewCell.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
@@ -399,6 +408,7 @@
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
 				E42397D02959866300DDAF53 /* EventsViewController.swift in Sources */,
 				E42397882954C82500DDAF53 /* AppDelegate.swift in Sources */,
+				E423980D295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift in Sources */,
 				E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */,
 				E42397E029598B2300DDAF53 /* TicketsViewController.swift in Sources */,
 				E42397EC29598F6E00DDAF53 /* NotificationComposer.swift in Sources */,
@@ -408,9 +418,11 @@
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
 				E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */,
 				E42397B629550AEE00DDAF53 /* String+.swift in Sources */,
+				E4239811295BB1A500DDAF53 /* NSObject+className.swift in Sources */,
 				E42397D42959868500DDAF53 /* AnimalsViewModel.swift in Sources */,
 				E42397F029598FC500DDAF53 /* ProfileViewController.swift in Sources */,
 				E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */,
+				E423980B295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift in Sources */,
 				E42397CC29590ED600DDAF53 /* MainTabBarController.swift in Sources */,
 				E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,

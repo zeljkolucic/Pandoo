@@ -38,3 +38,7 @@
 "profile_title" = "Profile";
 "events_title" = "Events";
 "animals_title" = "Animals";
+"change_password" = "Change password";
+"sign_out" = "Sign out";
+"delete_account" = "Delete account";
+"delete_account_description" = "By deleting your account you will lose all your data. However, the tickets you bought will still be available in your mail.";

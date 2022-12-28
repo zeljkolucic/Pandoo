@@ -40,4 +40,8 @@ public struct Strings {
     public static let profileTitle = "profile_title"
     public static let eventsTitle = "events_title"
     public static let animalsTitle = "animals_title"
+    public static let changePassword = "change_password"
+    public static let signOut = "sign_out"
+    public static let deleteAccount = "delete_account"
+    public static let deleteAccountDescription = "delete_account_description"
 }
