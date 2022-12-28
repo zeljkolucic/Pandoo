@@ -68,6 +68,7 @@
 		E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */; };
 		E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */; };
 		E423981A295C434D00DDAF53 /* EditPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */; };
+		E423981C295C440100DDAF53 /* EditAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423981B295C440100DDAF53 /* EditAddressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLastNameViewController.swift; sourceTree = "<group>"; };
 		E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneViewController.swift; sourceTree = "<group>"; };
+		E423981B295C440100DDAF53 /* EditAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 				E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */,
 				E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */,
 				E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */,
+				E423981B295C440100DDAF53 /* EditAddressViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */,
 				E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */,
 				E42397DE2959885000DDAF53 /* MainComposer.swift in Sources */,
+				E423981C295C440100DDAF53 /* EditAddressViewController.swift in Sources */,
 				E42397D82959880200DDAF53 /* HomeComposer.swift in Sources */,
 				E42397E429598C7400DDAF53 /* NotificationsViewModel.swift in Sources */,
 				E42397DA2959880900DDAF53 /* EventComposer.swift in Sources */,

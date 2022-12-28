@@ -137,7 +137,8 @@ extension ProfileViewController: Selectable {
     }
     
     func didSelectAddress() {
-        
+        let viewController = EditAddressViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectChangePassword() {
