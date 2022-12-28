@@ -67,6 +67,7 @@
 		E4239814295C353E00DDAF53 /* EditFirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */; };
 		E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */; };
 		E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */; };
+		E423981A295C434D00DDAF53 /* EditPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFirstNameViewController.swift; sourceTree = "<group>"; };
 		E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLastNameViewController.swift; sourceTree = "<group>"; };
+		E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 				E42397EF29598FC500DDAF53 /* ProfileViewController.swift */,
 				E4239813295C353E00DDAF53 /* EditFirstNameViewController.swift */,
 				E4239817295C42BA00DDAF53 /* EditLastNameViewController.swift */,
+				E4239819295C434D00DDAF53 /* EditPhoneViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
 				E42397D02959866300DDAF53 /* EventsViewController.swift in Sources */,
+				E423981A295C434D00DDAF53 /* EditPhoneViewController.swift in Sources */,
 				E42397882954C82500DDAF53 /* AppDelegate.swift in Sources */,
 				E423980D295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift in Sources */,
 				E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */,

@@ -132,7 +132,8 @@ extension ProfileViewController: Selectable {
     }
     
     func didSelectPhone() {
-        
+        let viewController = EditPhoneViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectAddress() {
