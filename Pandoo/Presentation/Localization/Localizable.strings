@@ -44,3 +44,6 @@
 "delete_account_description" = "By deleting your account you will lose all your data. However, the tickets you bought will still be available in your mail.";
 "greeting_title" = "Hi, %@ %@!";
 "ok" = "OK";
+"sign_out_alert_title" = "Are you sure you want to sign out?";
+"no" = "No";
+"delete_account_alert_title" = "Are you sure you want to delete your account?";

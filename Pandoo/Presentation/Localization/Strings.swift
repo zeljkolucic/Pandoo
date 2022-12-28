@@ -46,4 +46,7 @@ public struct Strings {
     public static let deleteAccountDescription = "delete_account_description"
     public static let greetingTitle = "greeting_title"
     public static let ok = "ok"
+    public static let signOutAlertTitle = "sign_out_alert_title"
+    public static let no = "no"
+    public static let deleteAccountAlertTitle = "delete_account_alert_title"
 }

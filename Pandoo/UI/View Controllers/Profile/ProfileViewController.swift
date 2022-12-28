@@ -146,11 +146,23 @@ extension ProfileViewController: Selectable {
     }
     
     func didSelectSignOut() {
-        
+        let title = Strings.signOutAlertTitle.localized
+        let alertController = UIAlertController(title: title, message: .none, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Strings.no.localized, style: .default))
+        alertController.addAction(UIAlertAction(title: Strings.ok.localized, style: .destructive, handler: { [weak self] _ in
+            self?.dismiss(animated: true)
+        }))
+        present(alertController, animated: true)
     }
     
     func didSelectDeleteAccount() {
-        
+        let title = Strings.deleteAccountAlertTitle.localized
+        let alertController = UIAlertController(title: title, message: Strings.deleteAccountDescription.localized, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Strings.no.localized, style: .default))
+        alertController.addAction(UIAlertAction(title: Strings.ok.localized, style: .destructive, handler: { [weak self] _ in
+            self?.dismiss(animated: true)
+        }))
+        present(alertController, animated: true)
     }
 }
 
