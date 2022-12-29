@@ -78,6 +78,7 @@
 		E423982F295D941100DDAF53 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423982E295D941100DDAF53 /* GradientView.swift */; };
 		E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239830295D988A00DDAF53 /* CommentViewController.swift */; };
 		E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239832295DA41200DDAF53 /* EventDetailViewController.swift */; };
+		E4239835295DADD300DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		E423982E295D941100DDAF53 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E4239830295D988A00DDAF53 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		E4239832295DA41200DDAF53 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				E42397DF29598B2300DDAF53 /* TicketsViewController.swift */,
+				E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */,
 				E42397EE29598F9E00DDAF53 /* ProfileComposer.swift in Sources */,
 				E4239822295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift in Sources */,
+				E4239835295DADD300DDAF53 /* BuyTicketViewController.swift in Sources */,
 				E42397D62959869300DDAF53 /* AnimalsViewController.swift in Sources */,
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
 				E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */,

@@ -13,8 +13,15 @@ public final class TicketComposer {
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let viewModel = TicketsViewModel()
         return storyboard.instantiateViewController(identifier: TicketsViewController.className) { coder in
-            return TicketsViewController(coder: coder, viewModel: viewModel)
+            return TicketsViewController(coder: coder, viewModel: viewModel, onBuyTicket: pushBuyTicketViewController)
         }
+    }
+    
+    private static func pushBuyTicketViewController(to navigationController: UINavigationController?) {
+        let bundle = Bundle(for: BuyTicketViewController.self)
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let viewController = storyboard.instantiateViewController(withIdentifier: BuyTicketViewController.className)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

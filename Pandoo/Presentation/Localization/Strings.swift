@@ -56,4 +56,5 @@ public struct Strings {
     public static let comments = "comments"
     public static let comment = "comment"
     public static let emptyComment = "empty_comment"
+    public static let buyTicket = "buy_ticket"
 }
