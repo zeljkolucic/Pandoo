@@ -1,15 +1,17 @@
 //
-//  TextFieldTableViewCell.swift
+//  SecureTextEntryTextFieldTableViewCell.swift
 //  Pandoo
 //
-//  Created by Zeljko Lucic on 28.12.22..
+//  Created by Zeljko Lucic on 29.12.22..
 //
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell {
-    private(set) lazy var textField: UITextField = {
-        let textField = UITextField()
+final class SecureTextEntryTextFieldTableViewCell: UITableViewCell {
+    private(set) lazy var textField: SecureTextEntryTextField = {
+        let textField = SecureTextEntryTextField()
+        textField.isSecureTextEntry = true
+        textField.autocorrectionType = .no
         textField.delegate = self
         textField.clearButtonMode = .whileEditing
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -29,12 +31,6 @@ class TextFieldTableViewCell: UITableViewCell {
             return textField.text
         } set {
             textField.text = newValue
-        }
-    }
-    
-    var keyboardType: UIKeyboardType = .default {
-        didSet {
-            textField.keyboardType = keyboardType
         }
     }
     
@@ -60,11 +56,10 @@ class TextFieldTableViewCell: UITableViewCell {
         bottomConstraint.priority = .defaultLow
         bottomConstraint.isActive = true
         textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding).isActive = true
-        textField.becomeFirstResponder()
     }
 }
 
-extension TextFieldTableViewCell: UITextFieldDelegate {
+extension SecureTextEntryTextFieldTableViewCell: UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         textField.text = ""
         return true

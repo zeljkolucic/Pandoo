@@ -142,7 +142,8 @@ extension ProfileViewController: Selectable {
     }
     
     func didSelectChangePassword() {
-        
+        let viewController = ChangePasswordViewController(viewModel: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func didSelectSignOut() {

@@ -49,4 +49,6 @@ public struct Strings {
     public static let signOutAlertTitle = "sign_out_alert_title"
     public static let no = "no"
     public static let deleteAccountAlertTitle = "delete_account_alert_title"
+    public static let oldPassword = "old_password"
+    public static let newPassword = "new_password"
 }

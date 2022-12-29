@@ -47,3 +47,5 @@
 "sign_out_alert_title" = "Are you sure you want to sign out?";
 "no" = "No";
 "delete_account_alert_title" = "Are you sure you want to delete your account?";
+"old_password" = "Old password";
+"new_password" = "New password";
