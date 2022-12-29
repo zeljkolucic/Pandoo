@@ -83,6 +83,7 @@
 		E4239839295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */; };
 		E423983B295DBC3100DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */; };
 		E423983D295DBEA900DDAF53 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */; };
+		E423983F295DC29C00DDAF53 /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTicketCollectionViewCell.xib; sourceTree = "<group>"; };
 		E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 				E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */,
 				E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */,
 				E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */,
+				E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */,
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
 				E423980F295BAAB100DDAF53 /* DestructiveTableViewCell.swift in Sources */,
+				E423983F295DC29C00DDAF53 /* StepperTableViewCell.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E4239838295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,

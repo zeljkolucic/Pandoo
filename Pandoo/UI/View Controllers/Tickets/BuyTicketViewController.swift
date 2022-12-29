@@ -28,6 +28,7 @@ public final class BuyTicketViewController: UIViewController {
     
     private func configureTableView() {
         tableView.register(DatePickerTableViewCell.self, forCellReuseIdentifier: DatePickerTableViewCell.className)
+        tableView.register(StepperTableViewCell.self, forCellReuseIdentifier: StepperTableViewCell.className)
     }
     
     @objc private func didTapCloseButton() {
@@ -41,15 +42,25 @@ public final class BuyTicketViewController: UIViewController {
 
 extension BuyTicketViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(DatePickerTableViewCell.self, indexPath: indexPath) else {
-            return UITableViewCell()
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(StepperTableViewCell.self, indexPath: indexPath) else {
+                return UITableViewCell()
+            }
+            
+            return cell
+            
+        default:
+            guard let cell = tableView.dequeueReusableCell(DatePickerTableViewCell.self, indexPath: indexPath) else {
+                return UITableViewCell()
+            }
+            
+            return cell
         }
-        
-        return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
