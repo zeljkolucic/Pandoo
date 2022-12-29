@@ -385,10 +385,10 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-f1-D29" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="411"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="368"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-O9-Ogn">
-                                                <rect key="frame" x="30" y="30" width="333" height="351"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-O9-Ogn">
+                                                <rect key="frame" x="30" y="30" width="333" height="308"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-oX-o97">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="180"/>
@@ -409,7 +409,7 @@
                                                         </connections>
                                                     </collectionView>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1p9-Rb-MV7">
-                                                        <rect key="frame" x="0.0" y="223" width="333" height="128"/>
+                                                        <rect key="frame" x="0.0" y="180" width="333" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="z8D-th-vaa"/>

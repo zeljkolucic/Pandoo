@@ -25,17 +25,18 @@ public final class BuyTicketViewController: UIViewController {
     }
     
     private func configureCollectionView() {
+        regularTicketsCollectionView.register(TicketCollectionViewCell.self)
+        promoTicketsCollectionView.register(PromoTicketCollectionViewCell.self)
         observation = regularTicketsCollectionView.observe(\.contentSize, changeHandler: { collectionView, _ in
             self.regularTicketsCollectionViewHeightConstraint.constant = collectionView.contentSize.height
         })
-        regularTicketsCollectionView.register(TicketCollectionViewCell.self)
     }
 }
 
 extension BuyTicketViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == promoTicketsCollectionView {
-            return 0
+            return 3
         } else {
             return 2
         }
@@ -43,7 +44,11 @@ extension BuyTicketViewController: UICollectionViewDelegate, UICollectionViewDat
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == promoTicketsCollectionView {
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(PromoTicketCollectionViewCell.self, indexPath: indexPath) else {
+                return UICollectionViewCell()
+            }
+            
+            return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
@@ -65,10 +70,10 @@ extension BuyTicketViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == promoTicketsCollectionView {
-            return 9
-        } else {
-            return 30
-        }
+        return 30
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
     }
 }

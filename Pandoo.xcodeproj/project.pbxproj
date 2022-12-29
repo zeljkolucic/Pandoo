@@ -79,6 +79,8 @@
 		E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239830295D988A00DDAF53 /* CommentViewController.swift */; };
 		E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239832295DA41200DDAF53 /* EventDetailViewController.swift */; };
 		E4239835295DADD300DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */; };
+		E4239838295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */; };
+		E4239839295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +158,8 @@
 		E4239830295D988A00DDAF53 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		E4239832295DA41200DDAF53 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
+		E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTicketCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +342,8 @@
 				E4239821295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift */,
 				E423982A295D91BC00DDAF53 /* CommentTableViewCell.swift */,
 				E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */,
+				E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */,
+				E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				E42397FF2959B81400DDAF53 /* AnimalTableViewCell.xib in Resources */,
 				E42397B829550B4D00DDAF53 /* Localizable.strings in Resources */,
 				E4239805295B99C700DDAF53 /* EventTableViewCell.xib in Resources */,
+				E4239839295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib in Resources */,
 				E42397912954C82600DDAF53 /* Assets.xcassets in Resources */,
 				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
@@ -498,6 +505,7 @@
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
 				E423980F295BAAB100DDAF53 /* DestructiveTableViewCell.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
+				E4239838295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift in Sources */,
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
 				E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */,

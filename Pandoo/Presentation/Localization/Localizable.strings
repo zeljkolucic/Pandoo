@@ -55,3 +55,5 @@
 "comment" = "Comment";
 "empty_comment" = "Comment cannot be empty.";
 "buy_ticket" = "Buy ticket";
+"gratis" = "gratis";
+"only" = "only";
