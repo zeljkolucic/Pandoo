@@ -39,7 +39,9 @@ public struct Strings {
     public static let notificationsTitle = "notifications_title"
     public static let profileTitle = "profile_title"
     public static let eventsTitle = "events_title"
+    public static let seeAll = "see_all"
     public static let animalsTitle = "animals_title"
+    public static let explore = "explore"
     public static let changePassword = "change_password"
     public static let signOut = "sign_out"
     public static let deleteAccount = "delete_account"
@@ -51,4 +53,6 @@ public struct Strings {
     public static let deleteAccountAlertTitle = "delete_account_alert_title"
     public static let oldPassword = "old_password"
     public static let newPassword = "new_password"
+    public static let comments = "comments"
+    public static let comment = "comment"
 }

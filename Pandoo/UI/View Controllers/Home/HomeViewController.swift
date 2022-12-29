@@ -45,6 +45,12 @@ public final class HomeViewController: UIViewController {
     
     private func configureLayout() {
         navigationController?.navigationBar.tintColor = .primaryGreen
+        
+        eventsTitle.text = Strings.eventsTitle.localized
+        seeAllEventsButton.setTitle(Strings.seeAll.localized, for: .normal)
+        
+        animalsTitle.text = Strings.animalsTitle.localized
+        exploreAnimalsButton.setTitle(Strings.explore.localized, for: .normal)
     }
     
     private func configureCollectionView() {

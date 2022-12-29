@@ -72,6 +72,10 @@
 		E423981E295D7F7D00DDAF53 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423981D295D7F7D00DDAF53 /* ChangePasswordViewController.swift */; };
 		E4239820295D80EE00DDAF53 /* SecureTextEntryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423981F295D80EE00DDAF53 /* SecureTextEntryTextField.swift */; };
 		E4239822295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239821295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift */; };
+		E4239824295D872B00DDAF53 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239823295D872B00DDAF53 /* AnimalDetailViewController.swift */; };
+		E423982C295D91BC00DDAF53 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423982A295D91BC00DDAF53 /* CommentTableViewCell.swift */; };
+		E423982D295D91BC00DDAF53 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */; };
+		E423982F295D941100DDAF53 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423982E295D941100DDAF53 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +146,10 @@
 		E423981D295D7F7D00DDAF53 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E423981F295D80EE00DDAF53 /* SecureTextEntryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextEntryTextField.swift; sourceTree = "<group>"; };
 		E4239821295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextEntryTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		E4239823295D872B00DDAF53 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
+		E423982A295D91BC00DDAF53 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		E423982E295D941100DDAF53 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,13 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				E42397A0295503BF00DDAF53 /* LoginViewController.swift */,
-				E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */,
-				E42397C52958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift */,
-				E42397CB29590ED600DDAF53 /* MainTabBarController.swift */,
-				E42397C729590C0200DDAF53 /* HomeViewController.swift */,
-				E42397CF2959866300DDAF53 /* EventsViewController.swift */,
-				E42397D52959869300DDAF53 /* AnimalsViewController.swift */,
-				E42397DF29598B2300DDAF53 /* TicketsViewController.swift */,
+				E4239828295D896B00DDAF53 /* Registration */,
+				E4239829295D898400DDAF53 /* Home */,
+				E4239827295D896400DDAF53 /* Events */,
+				E4239825295D895600DDAF53 /* Animals */,
+				E4239826295D895F00DDAF53 /* Tickets */,
 				E42397E729598CF400DDAF53 /* NotificationsViewController.swift */,
 				E4239812295C352A00DDAF53 /* Profile */,
 			);
@@ -286,6 +292,7 @@
 		E42397AB2955052600DDAF53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E423982E295D941100DDAF53 /* GradientView.swift */,
 				E42397B02955085D00DDAF53 /* RoundedButton.swift */,
 				E42397AC2955053100DDAF53 /* RoundedTextField.swift */,
 				E42397B929550D6800DDAF53 /* PasswordTextField.swift */,
@@ -323,6 +330,8 @@
 				E423980E295BAAB100DDAF53 /* DestructiveTableViewCell.swift */,
 				E4239815295C379600DDAF53 /* TextFieldTableViewCell.swift */,
 				E4239821295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift */,
+				E423982A295D91BC00DDAF53 /* CommentTableViewCell.swift */,
+				E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -338,6 +347,49 @@
 				E423981D295D7F7D00DDAF53 /* ChangePasswordViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		E4239825295D895600DDAF53 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				E42397D52959869300DDAF53 /* AnimalsViewController.swift */,
+				E4239823295D872B00DDAF53 /* AnimalDetailViewController.swift */,
+			);
+			path = Animals;
+			sourceTree = "<group>";
+		};
+		E4239826295D895F00DDAF53 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				E42397DF29598B2300DDAF53 /* TicketsViewController.swift */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
+		E4239827295D896400DDAF53 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				E42397CF2959866300DDAF53 /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		E4239828295D896B00DDAF53 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E42397C12955145A00DDAF53 /* FirstStepRegistrationViewController.swift */,
+				E42397C52958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		E4239829295D898400DDAF53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E42397CB29590ED600DDAF53 /* MainTabBarController.swift */,
+				E42397C729590C0200DDAF53 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +459,7 @@
 				E42397FB2959B0FC00DDAF53 /* TicketCollectionViewCell.xib in Resources */,
 				E423978F2954C82500DDAF53 /* Main.storyboard in Resources */,
 				E4239809295B9E0800DDAF53 /* NotificationTableViewCell.xib in Resources */,
+				E423982D295D91BC00DDAF53 /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +472,7 @@
 			files = (
 				E42397BC29550DEA00DDAF53 /* LoadingButton.swift in Sources */,
 				E42397FA2959B0FC00DDAF53 /* TicketCollectionViewCell.swift in Sources */,
+				E4239824295D872B00DDAF53 /* AnimalDetailViewController.swift in Sources */,
 				E42397C829590C0200DDAF53 /* HomeViewController.swift in Sources */,
 				E4239814295C353E00DDAF53 /* EditFirstNameViewController.swift in Sources */,
 				E42397CA29590E4600DDAF53 /* HomeViewModel.swift in Sources */,
@@ -427,6 +481,7 @@
 				E42397E229598C1E00DDAF53 /* TicketsViewModel.swift in Sources */,
 				E42397C62958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
+				E423982F295D941100DDAF53 /* GradientView.swift in Sources */,
 				E42397E829598CF400DDAF53 /* NotificationsViewController.swift in Sources */,
 				E42398012959B8C800DDAF53 /* UITableView+.swift in Sources */,
 				E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */,
@@ -465,6 +520,7 @@
 				E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
+				E423982C295D91BC00DDAF53 /* CommentTableViewCell.swift in Sources */,
 				E42397F72959A63D00DDAF53 /* UICollectionView+.swift in Sources */,
 				E4239818295C42BA00DDAF53 /* EditLastNameViewController.swift in Sources */,
 				E42397DE2959885000DDAF53 /* MainComposer.swift in Sources */,

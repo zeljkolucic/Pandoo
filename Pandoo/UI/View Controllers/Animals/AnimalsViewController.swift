@@ -11,9 +11,11 @@ public final class AnimalsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: AnimalsViewModel
+    private let onSingleAnimal: (UINavigationController?) -> Void
     
-    init?(coder: NSCoder, viewModel: AnimalsViewModel) {
+    init?(coder: NSCoder, viewModel: AnimalsViewModel, onSingleAnimal: @escaping (UINavigationController?) -> Void) {
         self.viewModel = viewModel
+        self.onSingleAnimal = onSingleAnimal
         super.init(coder: coder)
     }
     
@@ -51,5 +53,6 @@ extension AnimalsViewController: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        onSingleAnimal(navigationController)
     }
 }

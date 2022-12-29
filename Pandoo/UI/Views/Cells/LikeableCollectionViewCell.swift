@@ -21,7 +21,8 @@ class LikeableCollectionViewCell: UICollectionViewCell {
     var isLiked: Bool = false {
         didSet {
             let systemName = isLiked ? "heart.fill" : "heart"
-            let image = UIImage(systemName: systemName)
+            let configuration = UIImage.SymbolConfiguration(scale: .large)
+            let image = UIImage(systemName: systemName)?.withConfiguration(configuration)
             likeButton.setImage(image, for: .normal)
         }
     }
