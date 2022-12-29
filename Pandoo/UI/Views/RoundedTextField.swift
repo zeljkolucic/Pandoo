@@ -68,7 +68,7 @@ class RoundedTextField: UITextField {
     }
     
     @objc func editingDidBegin() {
-        layer.borderColor = UIColor.systemGreen.cgColor
+        layer.borderColor = UIColor.primaryGreen?.cgColor
         layer.borderWidth = 1.5
         messageLabel.isHidden = true
     }
