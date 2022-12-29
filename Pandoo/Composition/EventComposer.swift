@@ -13,11 +13,14 @@ public final class EventComposer {
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let viewModel = EventsViewModel()
         return storyboard.instantiateViewController(identifier: EventsViewController.className) { coder in
-            return EventsViewController(coder: coder, viewModel: viewModel)
+            return EventsViewController(coder: coder, viewModel: viewModel, onSingleEvent: pushEventDetailViewController)
         }
     }
     
     public static func pushEventDetailViewController(to navigationController: UINavigationController?) {
-        
+        let bundle = Bundle(for: EventDetailViewController.self)
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let viewController = storyboard.instantiateViewController(withIdentifier: EventDetailViewController.className)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

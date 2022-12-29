@@ -77,6 +77,7 @@
 		E423982D295D91BC00DDAF53 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */; };
 		E423982F295D941100DDAF53 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423982E295D941100DDAF53 /* GradientView.swift */; };
 		E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239830295D988A00DDAF53 /* CommentViewController.swift */; };
+		E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239832295DA41200DDAF53 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		E423982E295D941100DDAF53 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E4239830295D988A00DDAF53 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		E4239832295DA41200DDAF53 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				E42397CF2959866300DDAF53 /* EventsViewController.swift */,
+				E4239832295DA41200DDAF53 /* EventDetailViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				E4239824295D872B00DDAF53 /* AnimalDetailViewController.swift in Sources */,
 				E42397C829590C0200DDAF53 /* HomeViewController.swift in Sources */,
 				E4239814295C353E00DDAF53 /* EditFirstNameViewController.swift in Sources */,
+				E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */,
 				E42397CA29590E4600DDAF53 /* HomeViewModel.swift in Sources */,
 				E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */,
 				E42397DC2959880F00DDAF53 /* AnimalComposer.swift in Sources */,

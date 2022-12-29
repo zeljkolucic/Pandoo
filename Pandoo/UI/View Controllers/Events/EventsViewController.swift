@@ -11,9 +11,11 @@ public final class EventsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: EventsViewModel
+    private let onSingleEvent: (UINavigationController?) -> Void
     
-    init?(coder: NSCoder, viewModel: EventsViewModel) {
+    init?(coder: NSCoder, viewModel: EventsViewModel, onSingleEvent: @escaping (UINavigationController?) -> Void) {
         self.viewModel = viewModel
+        self.onSingleEvent = onSingleEvent
         super.init(coder: coder)
     }
     
@@ -51,5 +53,6 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        onSingleEvent(navigationController)
     }
 }

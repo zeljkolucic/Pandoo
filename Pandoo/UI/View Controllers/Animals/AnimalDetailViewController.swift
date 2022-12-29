@@ -49,6 +49,8 @@ public final class AnimalDetailViewController: UIViewController {
     }
     
     private func configureLayout() {
+        containerView.layer.cornerRadius = 30
+        containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         commentsLabel.text = Strings.comments.localized
         commentsTableView.register(CommentTableViewCell.self)
         observation = commentsTableView.observe(\.contentSize) { tableView, _ in
