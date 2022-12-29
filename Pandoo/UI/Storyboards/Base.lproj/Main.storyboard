@@ -469,6 +469,10 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="i7v-If-EBV" id="f6J-Ie-z98"/>
+                                                    <outlet property="delegate" destination="i7v-If-EBV" id="ccO-an-gfJ"/>
+                                                </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="194" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-F6-7a9">
                                                 <rect key="frame" x="30" y="240" width="333" height="33"/>
@@ -507,6 +511,10 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="i7v-If-EBV" id="kzz-so-bqt"/>
+                                                    <outlet property="delegate" destination="i7v-If-EBV" id="bAH-Rv-z7m"/>
+                                                </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="194" translatesAutoresizingMaskIntoConstraints="NO" id="Lbp-6Y-pzU">
                                                 <rect key="frame" x="30" y="493" width="333" height="33"/>
@@ -545,6 +553,10 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="i7v-If-EBV" id="Dym-nj-Aj7"/>
+                                                    <outlet property="delegate" destination="i7v-If-EBV" id="HrC-kn-Rov"/>
+                                                </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-gk-D0s">
                                                 <rect key="frame" x="30" y="736" width="333" height="41"/>

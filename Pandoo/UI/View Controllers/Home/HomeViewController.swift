@@ -59,16 +59,8 @@ public final class HomeViewController: UIViewController {
     
     private func configureCollectionView() {
         ticketsCollectionView.register(TicketCollectionViewCell.self)
-        ticketsCollectionView.delegate = self
-        ticketsCollectionView.dataSource = self
-        
         eventsCollectionView.register(LikeableCollectionViewCell.self)
-        eventsCollectionView.delegate = self
-        eventsCollectionView.dataSource = self
-        
         animalsCollectionView.register(LikeableCollectionViewCell.self)
-        animalsCollectionView.delegate = self
-        animalsCollectionView.dataSource = self
     }
     
     @IBAction private func didTapSeeAllEventsButton() {
