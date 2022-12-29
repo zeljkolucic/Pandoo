@@ -53,3 +53,4 @@
 "new_password" = "New password";
 "comments" = "Comments";
 "comment" = "Comment";
+"empty_comment" = "Comment cannot be empty.";

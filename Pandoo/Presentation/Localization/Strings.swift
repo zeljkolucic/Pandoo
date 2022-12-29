@@ -55,4 +55,5 @@ public struct Strings {
     public static let newPassword = "new_password"
     public static let comments = "comments"
     public static let comment = "comment"
+    public static let emptyComment = "empty_comment"
 }

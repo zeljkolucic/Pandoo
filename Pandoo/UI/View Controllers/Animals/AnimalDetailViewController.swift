@@ -32,6 +32,17 @@ public final class AnimalDetailViewController: UIViewController {
         }
     }
     
+    private let onComment: (UINavigationController?) -> Void
+    
+    public init?(coder: NSCoder, onComment: @escaping (UINavigationController?) -> Void) {
+        self.onComment = onComment
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
@@ -52,7 +63,7 @@ public final class AnimalDetailViewController: UIViewController {
     }
     
     @IBAction private func didTapCommentButton() {
-        
+        onComment(navigationController)
     }
 }
 

@@ -20,7 +20,15 @@ public final class AnimalComposer {
     public static func pushAnimalDetailViewController(to navigationController: UINavigationController?) {
         let bundle = Bundle(for: AnimalDetailViewController.self)
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        let viewController = storyboard.instantiateViewController(withIdentifier: AnimalDetailViewController.className)
+        let viewController = storyboard.instantiateViewController(identifier: AnimalDetailViewController.className) { coder in
+            return AnimalDetailViewController(coder: coder, onComment: pushCommentViewController)
+        }
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    public static func pushCommentViewController(to navigationController: UINavigationController?) {
+        let viewController = CommentViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
