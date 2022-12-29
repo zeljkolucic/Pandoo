@@ -25,11 +25,15 @@ public final class HomeViewController: UIViewController {
     private let viewModel: HomeViewModel
     private let onSeeAllEvents: (UINavigationController?) -> Void
     private let onExploreAnimals: (UINavigationController?) -> Void
+    private let onSingleEvent: (UINavigationController?) -> Void
+    private let onSingleAnimal: (UINavigationController?) -> Void
     
-    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void) {
+    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void, onSingleEvent: @escaping (UINavigationController?) -> Void, onSingleAnimal: @escaping (UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onSeeAllEvents = onSeeAllEvents
         self.onExploreAnimals = onExploreAnimals
+        self.onSingleEvent = onSingleEvent
+        self.onSingleAnimal = onSingleAnimal
         super.init(coder: coder)
     }
     
@@ -127,5 +131,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInset
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == ticketsCollectionView {
+            
+        } else if collectionView == eventsCollectionView {
+            onSingleEvent(navigationController)
+        } else {
+            onSingleAnimal(navigationController)
+        }
     }
 }

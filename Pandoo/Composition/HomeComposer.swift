@@ -13,7 +13,7 @@ public final class HomeComposer {
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let viewModel = HomeViewModel()
         return storyboard.instantiateViewController(identifier: HomeViewController.className) { coder in
-            return HomeViewController(coder: coder, viewModel: viewModel, onSeeAllEvents: pushEventsViewController, onExploreAnimals: pushAnimalsViewController)
+            return HomeViewController(coder: coder, viewModel: viewModel, onSeeAllEvents: pushEventsViewController, onExploreAnimals: pushAnimalsViewController, onSingleEvent: EventComposer.pushEventDetailViewController, onSingleAnimal: AnimalComposer.pushAnimalDetailViewController)
         }
     }
     

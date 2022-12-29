@@ -16,4 +16,8 @@ public final class EventComposer {
             return EventsViewController(coder: coder, viewModel: viewModel)
         }
     }
+    
+    public static func pushEventDetailViewController(to navigationController: UINavigationController?) {
+        
+    }
 }
