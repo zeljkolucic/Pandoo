@@ -59,4 +59,6 @@ public struct Strings {
     public static let buyTicket = "buy_ticket"
     public static let gratis = "gratis"
     public static let only = "only"
+    public static let date = "date"
+    public static let buy = "buy"
 }

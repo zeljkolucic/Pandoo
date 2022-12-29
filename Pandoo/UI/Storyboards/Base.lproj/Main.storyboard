@@ -373,10 +373,10 @@
             </objects>
             <point key="canvasLocation" x="1862" y="1671"/>
         </scene>
-        <!--Buy Ticket View Controller-->
+        <!--Choose Ticket View Controller-->
         <scene sceneID="ANG-GG-TcU">
             <objects>
-                <viewController storyboardIdentifier="BuyTicketViewController" id="8SL-lV-7e9" customClass="BuyTicketViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseTicketViewController" id="8SL-lV-7e9" customClass="ChooseTicketViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyr-s9-DTC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -463,11 +463,77 @@
                         <outlet property="promoTicketsCollectionView" destination="ffS-oX-o97" id="M2a-xf-B2h"/>
                         <outlet property="regularTicketsCollectionView" destination="1p9-Rb-MV7" id="Nld-Tk-Qpv"/>
                         <outlet property="regularTicketsCollectionViewHeightConstraint" destination="z8D-th-vaa" id="kzf-ro-JB5"/>
+                        <segue destination="gEz-rn-75w" kind="show" identifier="ChooseToBuySegue" id="2MH-nx-YT6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TmE-ag-BeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2849.6183206106871" y="1669.7183098591549"/>
+        </scene>
+        <!--Buy Ticket View Controller-->
+        <scene sceneID="e8I-ae-Aih">
+            <objects>
+                <viewController storyboardIdentifier="BuyTicketViewController" id="gEz-rn-75w" customClass="BuyTicketViewController" customModule="Pandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7RE-p7-1SV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vLn-g1-Kyt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="320"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="j3c-2N-WEt"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="gEz-rn-75w" id="7xr-Cs-Toh"/>
+                                    <outlet property="delegate" destination="gEz-rn-75w" id="jvd-Wi-9Kf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-q3-Gxb">
+                                <rect key="frame" x="30" y="693" width="333" height="60"/>
+                                <color key="backgroundColor" name="Primary Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tXr-WV-tZ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapBuyButton" destination="gEz-rn-75w" eventType="touchUpInside" id="1Jq-3X-haN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c27-k0-9YP">
+                                <rect key="frame" x="30" y="654.33333333333337" width="333" height="28.666666666666629"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KgK-zO-9z1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ydd-q3-Gxb" firstAttribute="leading" secondItem="KgK-zO-9z1" secondAttribute="leading" constant="30" id="38K-9u-Nof"/>
+                            <constraint firstItem="vLn-g1-Kyt" firstAttribute="top" secondItem="KgK-zO-9z1" secondAttribute="top" id="Dlx-Tw-VhJ"/>
+                            <constraint firstItem="KgK-zO-9z1" firstAttribute="trailing" secondItem="c27-k0-9YP" secondAttribute="trailing" constant="30" id="WAb-dM-QCe"/>
+                            <constraint firstItem="vLn-g1-Kyt" firstAttribute="leading" secondItem="KgK-zO-9z1" secondAttribute="leading" id="fpQ-0e-lul"/>
+                            <constraint firstItem="ydd-q3-Gxb" firstAttribute="top" secondItem="c27-k0-9YP" secondAttribute="bottom" constant="10" id="h2a-6s-T0i"/>
+                            <constraint firstItem="KgK-zO-9z1" firstAttribute="bottom" secondItem="ydd-q3-Gxb" secondAttribute="bottom" constant="30" id="l3e-w3-u7I"/>
+                            <constraint firstItem="KgK-zO-9z1" firstAttribute="trailing" secondItem="ydd-q3-Gxb" secondAttribute="trailing" constant="30" id="oiQ-DD-byT"/>
+                            <constraint firstItem="c27-k0-9YP" firstAttribute="leading" secondItem="KgK-zO-9z1" secondAttribute="leading" constant="30" id="s9k-8E-vVG"/>
+                            <constraint firstItem="KgK-zO-9z1" firstAttribute="trailing" secondItem="vLn-g1-Kyt" secondAttribute="trailing" id="wpy-Ez-Iye"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vI1-Oc-BDX"/>
+                    <connections>
+                        <outlet property="buyButton" destination="ydd-q3-Gxb" id="yXN-rV-5SA"/>
+                        <outlet property="tableView" destination="vLn-g1-Kyt" id="s39-Kr-hmA"/>
+                        <outlet property="totalLabel" destination="c27-k0-9YP" id="hAJ-a7-mDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKq-Ih-MYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3659" y="1670"/>
         </scene>
         <!--Item-->
         <scene sceneID="dLC-R8-8ZE">

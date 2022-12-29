@@ -78,9 +78,11 @@
 		E423982F295D941100DDAF53 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423982E295D941100DDAF53 /* GradientView.swift */; };
 		E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239830295D988A00DDAF53 /* CommentViewController.swift */; };
 		E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239832295DA41200DDAF53 /* EventDetailViewController.swift */; };
-		E4239835295DADD300DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */; };
+		E4239835295DADD300DDAF53 /* ChooseTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239834295DADD300DDAF53 /* ChooseTicketViewController.swift */; };
 		E4239838295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */; };
 		E4239839295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */; };
+		E423983B295DBC3100DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */; };
+		E423983D295DBEA900DDAF53 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,9 +159,11 @@
 		E423982E295D941100DDAF53 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E4239830295D988A00DDAF53 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		E4239832295DA41200DDAF53 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
-		E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
+		E4239834295DADD300DDAF53 /* ChooseTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTicketViewController.swift; sourceTree = "<group>"; };
 		E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTicketCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTicketCollectionViewCell.xib; sourceTree = "<group>"; };
+		E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
+		E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +348,7 @@
 				E423982B295D91BC00DDAF53 /* CommentTableViewCell.xib */,
 				E4239836295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift */,
 				E4239837295DB79600DDAF53 /* PromoTicketCollectionViewCell.xib */,
+				E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -375,7 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				E42397DF29598B2300DDAF53 /* TicketsViewController.swift */,
-				E4239834295DADD300DDAF53 /* BuyTicketViewController.swift */,
+				E4239834295DADD300DDAF53 /* ChooseTicketViewController.swift */,
+				E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				E42397DC2959880F00DDAF53 /* AnimalComposer.swift in Sources */,
 				E42397E229598C1E00DDAF53 /* TicketsViewModel.swift in Sources */,
 				E42397C62958FDEE00DDAF53 /* SecondStepRegistrationViewController.swift in Sources */,
+				E423983B295DBC3100DDAF53 /* BuyTicketViewController.swift in Sources */,
 				E42397AF295506E500DDAF53 /* UIColor+.swift in Sources */,
 				E423982F295D941100DDAF53 /* GradientView.swift in Sources */,
 				E42397E829598CF400DDAF53 /* NotificationsViewController.swift in Sources */,
@@ -509,6 +516,7 @@
 				E42397BE29550E8A00DDAF53 /* Validator.swift in Sources */,
 				E42397B42955095D00DDAF53 /* Strings.swift in Sources */,
 				E4239831295D988A00DDAF53 /* CommentViewController.swift in Sources */,
+				E423983D295DBEA900DDAF53 /* DatePickerTableViewCell.swift in Sources */,
 				E42397FE2959B81400DDAF53 /* AnimalTableViewCell.swift in Sources */,
 				E42397F32959A3FC00DDAF53 /* LikeableCollectionViewCell.swift in Sources */,
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
@@ -524,7 +532,7 @@
 				E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */,
 				E42397EE29598F9E00DDAF53 /* ProfileComposer.swift in Sources */,
 				E4239822295D81B600DDAF53 /* SecureTextEntryTextFieldTableViewCell.swift in Sources */,
-				E4239835295DADD300DDAF53 /* BuyTicketViewController.swift in Sources */,
+				E4239835295DADD300DDAF53 /* ChooseTicketViewController.swift in Sources */,
 				E42397D62959869300DDAF53 /* AnimalsViewController.swift in Sources */,
 				E423978A2954C82500DDAF53 /* SceneDelegate.swift in Sources */,
 				E42397C029550EAD00DDAF53 /* RegistrationViewModel.swift in Sources */,

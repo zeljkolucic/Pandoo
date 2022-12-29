@@ -8,72 +8,51 @@
 import UIKit
 
 public final class BuyTicketViewController: UIViewController {
-    @IBOutlet private weak var promoTicketsCollectionView: UICollectionView!
-    @IBOutlet private weak var regularTicketsCollectionView: UICollectionView!
-    @IBOutlet private weak var regularTicketsCollectionViewHeightConstraint: NSLayoutConstraint!
-    
-    private var observation: NSKeyValueObservation?
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var totalLabel: UILabel!
+    @IBOutlet private weak var buyButton: UIButton!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
-        configureCollectionView()
+        configureTableView()
     }
     
     private func configureLayout() {
-        navigationItem.title = Strings.buyTicket.localized
+        navigationItem.leftBarButtonItem = .init(barButtonSystemItem: .close, target: self, action: #selector(didTapCloseButton))
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Group"
+        buyButton.setTitle(Strings.buy.localized, for: .normal)
+        buyButton.layer.cornerRadius = 5
     }
     
-    private func configureCollectionView() {
-        regularTicketsCollectionView.register(TicketCollectionViewCell.self)
-        promoTicketsCollectionView.register(PromoTicketCollectionViewCell.self)
-        observation = regularTicketsCollectionView.observe(\.contentSize, changeHandler: { collectionView, _ in
-            self.regularTicketsCollectionViewHeightConstraint.constant = collectionView.contentSize.height
-        })
+    private func configureTableView() {
+        tableView.register(DatePickerTableViewCell.self, forCellReuseIdentifier: DatePickerTableViewCell.className)
+    }
+    
+    @objc private func didTapCloseButton() {
+        dismiss(animated: true)
+    }
+    
+    @IBAction private func didTapBuyButton() {
+        dismiss(animated: true)
     }
 }
 
-extension BuyTicketViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == promoTicketsCollectionView {
-            return 3
-        } else {
-            return 2
+extension BuyTicketViewController: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(DatePickerTableViewCell.self, indexPath: indexPath) else {
+            return UITableViewCell()
         }
+        
+        return cell
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == promoTicketsCollectionView {
-            guard let cell = collectionView.dequeueReusableCell(PromoTicketCollectionViewCell.self, indexPath: indexPath) else {
-                return UICollectionViewCell()
-            }
-            
-            return cell
-        } else {
-            guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
-                return UICollectionViewCell()
-            }
-            
-            return cell
-        }
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == promoTicketsCollectionView {
-            return CGSize(width: 106, height: 150)
-        } else {
-            let width = UIScreen.main.bounds.width - 60
-            let height: CGFloat = 180.0
-            
-            return CGSize(width: width, height: height)
-        }
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 6
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
