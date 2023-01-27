@@ -89,6 +89,7 @@
 		E44A7C562984290D00C48A9C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C552984290D00C48A9C /* Event.swift */; };
 		E44A7C5829842AFC00C48A9C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5729842AFC00C48A9C /* EventViewModel.swift */; };
 		E44A7C5A2984530200C48A9C /* LikeButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */; };
+		E44A7C5C2984591800C48A9C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5B2984591800C48A9C /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +177,7 @@
 		E44A7C552984290D00C48A9C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E44A7C5729842AFC00C48A9C /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonDelegate.swift; sourceTree = "<group>"; };
+		E44A7C5B2984591800C48A9C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +437,7 @@
 			children = (
 				E44A7C5129841CCD00C48A9C /* Animal.swift */,
 				E44A7C552984290D00C48A9C /* Event.swift */,
+				E44A7C5B2984591800C48A9C /* Notification.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				E4239804295B99C700DDAF53 /* EventTableViewCell.swift in Sources */,
 				E42397EA29598F1000DDAF53 /* TicketComposer.swift in Sources */,
 				E423980F295BAAB100DDAF53 /* DestructiveTableViewCell.swift in Sources */,
+				E44A7C5C2984591800C48A9C /* Notification.swift in Sources */,
 				E423983F295DC29C00DDAF53 /* StepperTableViewCell.swift in Sources */,
 				E42397BA29550D6800DDAF53 /* PasswordTextField.swift in Sources */,
 				E4239838295DB79600DDAF53 /* PromoTicketCollectionViewCell.swift in Sources */,

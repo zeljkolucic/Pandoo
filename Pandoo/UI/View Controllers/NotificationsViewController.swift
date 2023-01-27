@@ -38,7 +38,7 @@ public final class NotificationsViewController: UIViewController {
 
 extension NotificationsViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.notifications.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,9 +46,10 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
             return UITableViewCell()
         }
         
-        cell.timestampLabel.text = "07/12/2022 10:30 AM"
-        cell.titleLabel.text = "Notification Title Notification Title Notification Title Notification Title Notification Title "
-        cell.descriptionLabel.text = "Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description Notification Description "
+        let notification = viewModel.notifications[indexPath.row]
+        cell.timestampLabel.text = notification.timestamp
+        cell.titleLabel.text = notification.title
+        cell.descriptionLabel.text = notification.description
         
         return cell
     }
