@@ -8,5 +8,5 @@
 import Foundation
 
 public final class EventsViewModel {
-    
+    var events = Event.events
 }

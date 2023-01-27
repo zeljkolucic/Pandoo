@@ -25,10 +25,10 @@ public final class HomeViewController: UIViewController {
     private let viewModel: HomeViewModel
     private let onSeeAllEvents: (UINavigationController?) -> Void
     private let onExploreAnimals: (UINavigationController?) -> Void
-    private let onSingleEvent: (UINavigationController?) -> Void
+    private let onSingleEvent: (Event, UINavigationController?) -> Void
     private let onSingleAnimal: (Animal, UINavigationController?) -> Void
     
-    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void, onSingleEvent: @escaping (UINavigationController?) -> Void, onSingleAnimal: @escaping (Animal, UINavigationController?) -> Void) {
+    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void, onSingleEvent: @escaping (Event, UINavigationController?) -> Void, onSingleAnimal: @escaping (Animal, UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onSeeAllEvents = onSeeAllEvents
         self.onExploreAnimals = onExploreAnimals
@@ -77,7 +77,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == ticketsCollectionView {
             return 2
         } else if collectionView == eventsCollectionView {
-            return 5
+            return viewModel.events.count
         } else {
             return viewModel.animals.count
         }
@@ -95,6 +95,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             guard let cell = collectionView.dequeueReusableCell(LikeableCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
+            
+            let event = viewModel.events[indexPath.item]
+            cell.titleLabel.text = event.title
+            cell.imageView.image = UIImage(named: event.imageName)
             
             return cell
             
@@ -134,7 +138,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == ticketsCollectionView {
             
         } else if collectionView == eventsCollectionView {
-            onSingleEvent(navigationController)
+            let event = viewModel.events[indexPath.row]
+            onSingleEvent(event, navigationController)
         } else {
             let animal = viewModel.animals[indexPath.row]
             onSingleAnimal(animal, navigationController)

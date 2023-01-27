@@ -11,9 +11,9 @@ public final class EventsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: EventsViewModel
-    private let onSingleEvent: (UINavigationController?) -> Void
+    private let onSingleEvent: (Event, UINavigationController?) -> Void
     
-    init?(coder: NSCoder, viewModel: EventsViewModel, onSingleEvent: @escaping (UINavigationController?) -> Void) {
+    init?(coder: NSCoder, viewModel: EventsViewModel, onSingleEvent: @escaping (Event, UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onSingleEvent = onSingleEvent
         super.init(coder: coder)
@@ -40,7 +40,7 @@ public final class EventsViewController: UIViewController {
 
 extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.events.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,11 +48,18 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let event = viewModel.events[indexPath.row]
+        cell.titleLabel.text = event.title
+        cell.subtitleLabel.text = event.description
+        cell.corneredImageView.image = UIImage(named: event.imageName)
+        cell.numberOfLikesLabel.text = String(event.numberOfLikes)
+        
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        onSingleEvent(navigationController)
+        let event = viewModel.events[indexPath.row]
+        onSingleEvent(event, navigationController)
     }
 }

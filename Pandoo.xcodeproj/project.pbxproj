@@ -86,6 +86,8 @@
 		E423983F295DC29C00DDAF53 /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */; };
 		E44A7C5229841CCD00C48A9C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5129841CCD00C48A9C /* Animal.swift */; };
 		E44A7C542984265600C48A9C /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C532984265600C48A9C /* AnimalViewModel.swift */; };
+		E44A7C562984290D00C48A9C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C552984290D00C48A9C /* Event.swift */; };
+		E44A7C5829842AFC00C48A9C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5729842AFC00C48A9C /* EventViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,8 @@
 		E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
 		E44A7C5129841CCD00C48A9C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		E44A7C532984265600C48A9C /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
+		E44A7C552984290D00C48A9C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E44A7C5729842AFC00C48A9C /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +276,7 @@
 				E42397E129598C1E00DDAF53 /* TicketsViewModel.swift */,
 				E42397E329598C7400DDAF53 /* NotificationsViewModel.swift */,
 				E42397E529598C9100DDAF53 /* ProfileViewModel.swift */,
+				E44A7C5729842AFC00C48A9C /* EventViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				E44A7C5129841CCD00C48A9C /* Animal.swift */,
+				E44A7C552984290D00C48A9C /* Event.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -540,7 +546,9 @@
 				E42397F32959A3FC00DDAF53 /* LikeableCollectionViewCell.swift in Sources */,
 				E42397D22959867C00DDAF53 /* EventsViewModel.swift in Sources */,
 				E42397A1295503BF00DDAF53 /* LoginViewController.swift in Sources */,
+				E44A7C562984290D00C48A9C /* Event.swift in Sources */,
 				E42397D02959866300DDAF53 /* EventsViewController.swift in Sources */,
+				E44A7C5829842AFC00C48A9C /* EventViewModel.swift in Sources */,
 				E423981A295C434D00DDAF53 /* EditPhoneViewController.swift in Sources */,
 				E42397882954C82500DDAF53 /* AppDelegate.swift in Sources */,
 				E423980D295BAA6800DDAF53 /* DisclosureIndicatorTableViewCell.swift in Sources */,

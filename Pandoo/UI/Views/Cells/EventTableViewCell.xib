@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euH-xL-eCU">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euH-xL-eCU">
                         <rect key="frame" x="30" y="12" width="120" height="72"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
@@ -51,8 +51,8 @@
                             </button>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-aQ-urd">
-                        <rect key="frame" x="160" y="12.000000000000004" width="51.333333333333343" height="43.333333333333343"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-aQ-urd">
+                        <rect key="frame" x="160" y="12" width="51.333333333333343" height="72"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6G-qP-hrM">
                                 <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="24"/>
@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC0-3g-JLg">
-                                <rect key="frame" x="0.0" y="24" width="51.333333333333336" height="19.333333333333329"/>
+                                <rect key="frame" x="0.0" y="52.666666666666671" width="51.333333333333336" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,6 +75,7 @@
                     <constraint firstAttribute="trailing" secondItem="PYa-JO-TgF" secondAttribute="trailing" constant="20" id="SPd-O4-d1g"/>
                     <constraint firstItem="PYa-JO-TgF" firstAttribute="centerY" secondItem="euH-xL-eCU" secondAttribute="centerY" id="UG1-xL-iuH"/>
                     <constraint firstItem="PYa-JO-TgF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ds9-aQ-urd" secondAttribute="trailing" constant="10" id="VKF-Gz-vhk"/>
+                    <constraint firstItem="ds9-aQ-urd" firstAttribute="bottom" secondItem="euH-xL-eCU" secondAttribute="bottom" id="ZAb-1R-xgG"/>
                     <constraint firstItem="ds9-aQ-urd" firstAttribute="top" secondItem="euH-xL-eCU" secondAttribute="top" id="chq-dX-ODk"/>
                     <constraint firstItem="euH-xL-eCU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="rOU-p6-x4G"/>
                     <constraint firstItem="ds9-aQ-urd" firstAttribute="leading" secondItem="euH-xL-eCU" secondAttribute="trailing" constant="10" id="rhP-Gb-BeA"/>
