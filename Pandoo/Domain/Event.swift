@@ -7,11 +7,18 @@
 
 import Foundation
 
-public struct Event {
+public class Event {
     public let title: String
     public let description: String
     public let imageName: String
-    public let numberOfLikes: Int
+    public var numberOfLikes: Int
+    
+    init(title: String, description: String, imageName: String, numberOfLikes: Int) {
+        self.title = title
+        self.description = description
+        self.imageName = imageName
+        self.numberOfLikes = numberOfLikes
+    }
     
     public static var events: [Event] = [
         Event(

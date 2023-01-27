@@ -53,13 +53,33 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.subtitleLabel.text = event.description
         cell.corneredImageView.image = UIImage(named: event.imageName)
         cell.numberOfLikesLabel.text = String(event.numberOfLikes)
+        cell.delegate = self
         
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? EventTableViewCell else { return }
+        cell.indexPath = indexPath
+    }
+    
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? EventTableViewCell else { return }
+        cell.indexPath = nil
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let event = viewModel.events[indexPath.row]
         onSingleEvent(event, navigationController)
+    }
+}
+
+extension EventsViewController: LikeButtonDelegate {
+    func didTapLikeButton(at indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? EventTableViewCell else { return }
+        let event = viewModel.events[indexPath.row]
+        event.numberOfLikes += cell.isLiked ? 1 : -1
+        cell.numberOfLikesLabel.text = String(event.numberOfLikes)
     }
 }

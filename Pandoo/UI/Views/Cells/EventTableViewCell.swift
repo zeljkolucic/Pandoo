@@ -14,6 +14,9 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var numberOfLikesLabel: UILabel!
     @IBOutlet private(set) weak var likeButton: UIButton!
     
+    var indexPath: IndexPath?
+    weak var delegate: LikeButtonDelegate?
+    
     var isLiked: Bool = false {
         didSet {
             let systemName = isLiked ? "heart.fill" : "heart"
@@ -34,5 +37,7 @@ class EventTableViewCell: UITableViewCell {
     
     @IBAction private func didTapLikeButton() {
         isLiked.toggle()
+        guard let indexPath else { return }
+        delegate?.didTapLikeButton(at: indexPath)
     }
 }
