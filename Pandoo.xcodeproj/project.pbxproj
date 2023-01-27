@@ -88,6 +88,7 @@
 		E44A7C542984265600C48A9C /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C532984265600C48A9C /* AnimalViewModel.swift */; };
 		E44A7C562984290D00C48A9C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C552984290D00C48A9C /* Event.swift */; };
 		E44A7C5829842AFC00C48A9C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5729842AFC00C48A9C /* EventViewModel.swift */; };
+		E44A7C5A2984530200C48A9C /* LikeButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		E44A7C532984265600C48A9C /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
 		E44A7C552984290D00C48A9C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E44A7C5729842AFC00C48A9C /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				E42397AB2955052600DDAF53 /* Views */,
 				E42397A72955041100DDAF53 /* Storyboards */,
 				E42397A62955040900DDAF53 /* View Controllers */,
+				E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				E42397D42959868500DDAF53 /* AnimalsViewModel.swift in Sources */,
 				E42397F029598FC500DDAF53 /* ProfileViewController.swift in Sources */,
 				E4239820295D80EE00DDAF53 /* SecureTextEntryTextField.swift in Sources */,
+				E44A7C5A2984530200C48A9C /* LikeButtonDelegate.swift in Sources */,
 				E423981E295D7F7D00DDAF53 /* ChangePasswordViewController.swift in Sources */,
 				E42397C42955147700DDAF53 /* RegistrationComposer.swift in Sources */,
 				E423980B295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift in Sources */,

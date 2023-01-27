@@ -53,13 +53,33 @@ extension AnimalsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.subtitleLabel.text = animal.latinName
         cell.numberOfLikesLabel.text = String(animal.numberOfLikes)
         cell.corneredImageView.image = UIImage(named: animal.imageName)
+        cell.delegate = self
         
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? AnimalTableViewCell else { return }
+        cell.indexPath = indexPath
+    }
+    
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? AnimalTableViewCell else { return }
+        cell.indexPath = nil
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let animal = viewModel.animals[indexPath.row]
         onSingleAnimal(animal, navigationController)
+    }
+}
+
+extension AnimalsViewController: LikeButtonDelegate {
+    func didTapLikeButton(at indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? AnimalTableViewCell else { return }
+        let animal = viewModel.animals[indexPath.row]
+        animal.numberOfLikes += cell.isLiked ? 1 : -1
+        cell.numberOfLikesLabel.text = String(animal.numberOfLikes)
     }
 }
