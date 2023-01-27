@@ -7,13 +7,22 @@
 
 import Foundation
 
-public struct Animal {
+public class Animal {
     public let name: String
     public let latinName: String
     public let description: String
     public let imageName: String
-    public let numberOfLikes: Int
-    public let comments: [Comment]
+    public var numberOfLikes: Int
+    public var comments: [Comment]
+    
+    init(name: String, latinName: String, description: String, imageName: String, numberOfLikes: Int, comments: [Comment]) {
+        self.name = name
+        self.latinName = latinName
+        self.description = description
+        self.imageName = imageName
+        self.numberOfLikes = numberOfLikes
+        self.comments = comments
+    }
     
     public static var animals: [Animal] = [
         Animal(
