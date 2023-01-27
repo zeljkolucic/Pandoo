@@ -84,6 +84,8 @@
 		E423983B295DBC3100DDAF53 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */; };
 		E423983D295DBEA900DDAF53 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */; };
 		E423983F295DC29C00DDAF53 /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */; };
+		E44A7C5229841CCD00C48A9C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5129841CCD00C48A9C /* Animal.swift */; };
+		E44A7C542984265600C48A9C /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C532984265600C48A9C /* AnimalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,8 @@
 		E423983A295DBC3100DDAF53 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		E423983C295DBEA900DDAF53 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 		E423983E295DC29C00DDAF53 /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
+		E44A7C5129841CCD00C48A9C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		E44A7C532984265600C48A9C /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 		E42397862954C82500DDAF53 /* Pandoo */ = {
 			isa = PBXGroup;
 			children = (
+				E44A7C5029841CC500C48A9C /* Domain */,
 				E42397A2295503D800DDAF53 /* Presentation */,
 				E423979C2954C85600DDAF53 /* UI */,
 				E423979D2954C89A00DDAF53 /* Composition */,
@@ -263,6 +268,7 @@
 				E42397C929590E4600DDAF53 /* HomeViewModel.swift */,
 				E42397D12959867C00DDAF53 /* EventsViewModel.swift */,
 				E42397D32959868500DDAF53 /* AnimalsViewModel.swift */,
+				E44A7C532984265600C48A9C /* AnimalViewModel.swift */,
 				E42397E129598C1E00DDAF53 /* TicketsViewModel.swift */,
 				E42397E329598C7400DDAF53 /* NotificationsViewModel.swift */,
 				E42397E529598C9100DDAF53 /* ProfileViewModel.swift */,
@@ -416,6 +422,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		E44A7C5029841CC500C48A9C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E44A7C5129841CCD00C48A9C /* Animal.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,6 +515,7 @@
 				E42397C829590C0200DDAF53 /* HomeViewController.swift in Sources */,
 				E4239814295C353E00DDAF53 /* EditFirstNameViewController.swift in Sources */,
 				E4239833295DA41200DDAF53 /* EventDetailViewController.swift in Sources */,
+				E44A7C542984265600C48A9C /* AnimalViewModel.swift in Sources */,
 				E42397CA29590E4600DDAF53 /* HomeViewModel.swift in Sources */,
 				E42397C22955145A00DDAF53 /* FirstStepRegistrationViewController.swift in Sources */,
 				E42397DC2959880F00DDAF53 /* AnimalComposer.swift in Sources */,
@@ -532,6 +547,7 @@
 				E42397B12955085D00DDAF53 /* RoundedButton.swift in Sources */,
 				E42397E029598B2300DDAF53 /* TicketsViewController.swift in Sources */,
 				E42397EC29598F6E00DDAF53 /* NotificationComposer.swift in Sources */,
+				E44A7C5229841CCD00C48A9C /* Animal.swift in Sources */,
 				E42397E629598C9100DDAF53 /* ProfileViewModel.swift in Sources */,
 				E4239816295C379600DDAF53 /* TextFieldTableViewCell.swift in Sources */,
 				E42397EE29598F9E00DDAF53 /* ProfileComposer.swift in Sources */,

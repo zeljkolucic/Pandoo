@@ -32,9 +32,11 @@ public final class AnimalDetailViewController: UIViewController {
         }
     }
     
+    private let viewModel: AnimalViewModel
     private let onComment: (UINavigationController?) -> Void
     
-    public init?(coder: NSCoder, onComment: @escaping (UINavigationController?) -> Void) {
+    public init?(coder: NSCoder, viewModel: AnimalViewModel, onComment: @escaping (UINavigationController?) -> Void) {
+        self.viewModel = viewModel
         self.onComment = onComment
         super.init(coder: coder)
     }
@@ -46,6 +48,7 @@ public final class AnimalDetailViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        loadData()
     }
     
     private func configureLayout() {
@@ -60,6 +63,15 @@ public final class AnimalDetailViewController: UIViewController {
         commentButton.setTitle(Strings.comment.localized, for: .normal)
     }
     
+    private func loadData() {
+        let animal = viewModel.animal
+        nameLabel.text = animal.name
+        latinNameLabel.text = animal.latinName
+        descriptionLabel.text = animal.description
+        imageView.image = UIImage(named: animal.imageName)
+        numberOfLikesLabel.text = String(animal.numberOfLikes)
+    }
+    
     @IBAction private func didTapLikeButton() {
         isLiked.toggle()
     }
@@ -71,13 +83,18 @@ public final class AnimalDetailViewController: UIViewController {
 
 extension AnimalDetailViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.animal.comments.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(CommentTableViewCell.self, indexPath: indexPath) else {
             return UITableViewCell()
         }
+        
+        let comment = viewModel.animal.comments[indexPath.row]
+        cell.nameLabel.text = comment.user
+        cell.timestampLabel.text = ""
+        cell.commentLabel.text = comment.text
         
         return cell
     }

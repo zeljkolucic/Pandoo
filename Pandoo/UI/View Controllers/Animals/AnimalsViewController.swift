@@ -11,9 +11,9 @@ public final class AnimalsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: AnimalsViewModel
-    private let onSingleAnimal: (UINavigationController?) -> Void
+    private let onSingleAnimal: (Animal, UINavigationController?) -> Void
     
-    init?(coder: NSCoder, viewModel: AnimalsViewModel, onSingleAnimal: @escaping (UINavigationController?) -> Void) {
+    init?(coder: NSCoder, viewModel: AnimalsViewModel, onSingleAnimal: @escaping (Animal, UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onSingleAnimal = onSingleAnimal
         super.init(coder: coder)
@@ -40,7 +40,7 @@ public final class AnimalsViewController: UIViewController {
 
 extension AnimalsViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.animals.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,11 +48,18 @@ extension AnimalsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let animal = viewModel.animals[indexPath.row]
+        cell.titleLabel.text = animal.name
+        cell.subtitleLabel.text = animal.latinName
+        cell.numberOfLikesLabel.text = String(animal.numberOfLikes)
+        cell.corneredImageView.image = UIImage(named: animal.imageName)
+        
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        onSingleAnimal(navigationController)
+        let animal = viewModel.animals[indexPath.row]
+        onSingleAnimal(animal, navigationController)
     }
 }

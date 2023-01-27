@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 public final class HomeViewModel {
-    
+    var animals = Array(Animal.animals.prefix(5))
 }

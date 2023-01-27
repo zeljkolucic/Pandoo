@@ -12,10 +12,12 @@ class LikeableCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var imageView: UIImageView!
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var subtitleLabel: UILabel!
+    @IBOutlet private(set) weak var gradientView: GradientView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 10
+        gradientView.color = .black.withAlphaComponent(0.3)
     }
     
     var isLiked: Bool = false {

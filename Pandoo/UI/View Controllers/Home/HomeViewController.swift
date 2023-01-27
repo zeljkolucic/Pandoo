@@ -26,9 +26,9 @@ public final class HomeViewController: UIViewController {
     private let onSeeAllEvents: (UINavigationController?) -> Void
     private let onExploreAnimals: (UINavigationController?) -> Void
     private let onSingleEvent: (UINavigationController?) -> Void
-    private let onSingleAnimal: (UINavigationController?) -> Void
+    private let onSingleAnimal: (Animal, UINavigationController?) -> Void
     
-    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void, onSingleEvent: @escaping (UINavigationController?) -> Void, onSingleAnimal: @escaping (UINavigationController?) -> Void) {
+    public init?(coder: NSCoder, viewModel: HomeViewModel, onSeeAllEvents: @escaping (UINavigationController?) -> Void, onExploreAnimals: @escaping (UINavigationController?) -> Void, onSingleEvent: @escaping (UINavigationController?) -> Void, onSingleAnimal: @escaping (Animal, UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onSeeAllEvents = onSeeAllEvents
         self.onExploreAnimals = onExploreAnimals
@@ -79,7 +79,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == eventsCollectionView {
             return 5
         } else {
-            return 5
+            return viewModel.animals.count
         }
     }
     
@@ -102,6 +102,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             guard let cell = collectionView.dequeueReusableCell(LikeableCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
+            
+            let animal = viewModel.animals[indexPath.item]
+            cell.titleLabel.text = animal.name
+            cell.subtitleLabel.text = animal.latinName
+            cell.imageView.image = UIImage(named: animal.imageName)
             
             return cell
         }
@@ -131,7 +136,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == eventsCollectionView {
             onSingleEvent(navigationController)
         } else {
-            onSingleAnimal(navigationController)
+            let animal = viewModel.animals[indexPath.row]
+            onSingleAnimal(animal, navigationController)
         }
     }
 }
