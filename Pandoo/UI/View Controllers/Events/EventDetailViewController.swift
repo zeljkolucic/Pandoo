@@ -56,5 +56,8 @@ public final class EventDetailViewController: UIViewController {
     
     @IBAction private func didTapLikeButton() {
         isLiked.toggle()
+        let event = viewModel.event
+        event.numberOfLikes += isLiked ? 1 : -1
+        numberOfLikesLabel.text = String(event.numberOfLikes)
     }
 }

@@ -76,6 +76,9 @@ public final class AnimalDetailViewController: UIViewController {
     
     @IBAction private func didTapLikeButton() {
         isLiked.toggle()
+        let animal = viewModel.animal
+        animal.numberOfLikes += isLiked ? 1 : -1
+        numberOfLikesLabel.text = String(animal.numberOfLikes)
     }
     
     @IBAction private func didTapCommentButton() {
