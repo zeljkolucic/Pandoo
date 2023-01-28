@@ -20,9 +20,9 @@ public final class LoginComposer {
         return UINavigationController(rootViewController: viewController)
     }
     
-    private static func presentTabBarController(over viewController: UIViewController) {
+    private static func presentTabBarController(over viewController: UIViewController?) {
         let tabBarController = MainComposer.tabBarController()
         tabBarController.modalPresentationStyle = .overFullScreen
-        viewController.present(tabBarController, animated: true)
+        viewController?.present(tabBarController, animated: true)
     }
 }

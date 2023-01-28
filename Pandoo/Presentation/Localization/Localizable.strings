@@ -12,6 +12,7 @@
 "login" = "Login";
 "or" = "or";
 "register" = "Register";
+"invalid_credentials" = "Username or password is invalid.";
 "registration_title" = "Registration";
 "empty_first_name" = "First name is required.";
 "empty_last_name" = "Last name is required.";

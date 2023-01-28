@@ -38,7 +38,7 @@ public final class ProfileViewController: UIViewController {
             self.tableViewHeightConstraint.constant = tableView.contentSize.height
         }
         
-        getUser()
+        loadUser()
     }
     
     private func configureLayout() {
@@ -46,7 +46,7 @@ public final class ProfileViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .primaryGreen
     }
     
-    private func getUser() {
+    private func loadUser() {
         if let firstName = viewModel.firstName, let lastName = viewModel.lastName {
             let title = Strings.greetingTitle.localized
             titleLabel.text = String(format: title, firstName, lastName)
@@ -169,6 +169,7 @@ extension ProfileViewController: Selectable {
 
 extension ProfileViewController: Reloadable {
     func reload() {
+        loadUser()
         tableView.reloadData()
     }
 }

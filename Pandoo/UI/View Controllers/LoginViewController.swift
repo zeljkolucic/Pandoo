@@ -17,10 +17,10 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private weak var registerButton: RoundedButton!
     
     private let viewModel: LoginViewModel
-    private let onLogin: (UIViewController) -> ()
+    private let onLogin: (UIViewController?) -> ()
     private let onRegister: (UINavigationController?) -> ()
     
-    init?(coder: NSCoder, viewModel: LoginViewModel, onLogin: @escaping (UIViewController) -> (), onRegister: @escaping (UINavigationController?) -> ()) {
+    init?(coder: NSCoder, viewModel: LoginViewModel, onLogin: @escaping (UIViewController?) -> (), onRegister: @escaping (UINavigationController?) -> ()) {
         self.viewModel = viewModel
         self.onLogin = onLogin
         self.onRegister = onRegister
@@ -36,6 +36,11 @@ public final class LoginViewController: UIViewController {
         configureLayout()
     }
     
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cleanInputForms()
+    }
+    
     private func configureLayout() {
         navigationController?.navigationBar.tintColor = .primaryGreen
         titleLabel.text = Strings.appName.localized
@@ -48,12 +53,33 @@ public final class LoginViewController: UIViewController {
         registerButton.layer.borderWidth = 1
     }
     
+    private func cleanInputForms() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     @IBAction private func didTapLoginButton() {
-        UIView.animate(withDuration: 0.3) {
-            self.loginButton.showLoading()
-        } completion: { _ in
-            self.loginButton.hideLoading()
-            self.onLogin(self)
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.loginButton.showLoading()
+        } completion: { [weak self] _ in
+            self?.loginButton.hideLoading()
+            self?.logIn()
+        }
+    }
+    
+    private func logIn() {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        viewModel.logInWith(email: email, password: password) { [weak self] result in
+            switch result {
+            case .success:
+                self?.onLogin(self)
+            case .failure:
+                let title = Strings.invalidCredentials.localized
+                let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: Strings.ok.localized, style: .default))
+                self?.present(alertController, animated: true)
+            }
         }
     }
     

@@ -14,6 +14,7 @@ public struct Strings {
     public static let login = "login"
     public static let or = "or"
     public static let register = "register"
+    public static let invalidCredentials = "invalid_credentials"
     public static let registrationTitle = "registration_title"
     public static let emptyFirstName = "empty_first_name"
     public static let emptyLastName = "empty_last_name"

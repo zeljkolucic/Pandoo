@@ -90,6 +90,7 @@
 		E44A7C5829842AFC00C48A9C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5729842AFC00C48A9C /* EventViewModel.swift */; };
 		E44A7C5A2984530200C48A9C /* LikeButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */; };
 		E44A7C5C2984591800C48A9C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5B2984591800C48A9C /* Notification.swift */; };
+		E44A7C5E29845D7000C48A9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A7C5D29845D7000C48A9C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		E44A7C5729842AFC00C48A9C /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		E44A7C592984530200C48A9C /* LikeButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonDelegate.swift; sourceTree = "<group>"; };
 		E44A7C5B2984591800C48A9C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E44A7C5D29845D7000C48A9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +440,7 @@
 				E44A7C5129841CCD00C48A9C /* Animal.swift */,
 				E44A7C552984290D00C48A9C /* Event.swift */,
 				E44A7C5B2984591800C48A9C /* Notification.swift */,
+				E44A7C5D29845D7000C48A9C /* User.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				E423980B295BAA2900DDAF53 /* DetailDisclosureTableViewCell.swift in Sources */,
 				E42397CC29590ED600DDAF53 /* MainTabBarController.swift in Sources */,
 				E4239808295B9E0800DDAF53 /* NotificationTableViewCell.swift in Sources */,
+				E44A7C5E29845D7000C48A9C /* User.swift in Sources */,
 				E42397AD2955053100DDAF53 /* RoundedTextField.swift in Sources */,
 				E42397A5295503EA00DDAF53 /* LoginViewModel.swift in Sources */,
 				E423982C295D91BC00DDAF53 /* CommentTableViewCell.swift in Sources */,

@@ -46,7 +46,7 @@ protocol Selectable: NSObject {
     func didSelectDeleteAccount()
 }
 
-protocol Reloadable: NSObject {
+protocol Reloadable: AnyObject {
     func reload()
 }
 
@@ -54,24 +54,45 @@ public final class ProfileViewModel {
     weak var selectable: Selectable?
     weak var reloadable: Reloadable?
     
-    var email: String? = "zeljko.lucic99@gmail.com" {
-        didSet { reloadable?.reload() }
+    var email: String? = User.loggedInUser?.email {
+        didSet {
+            reloadable?.reload()
+        }
     }
     
-    var firstName: String? = "Zeljko" {
-        didSet { reloadable?.reload() }
+    var firstName: String? = User.loggedInUser?.firstName {
+        didSet {
+            if let firstName {
+                User.loggedInUser?.firstName = firstName
+            }
+            reloadable?.reload()
+        }
     }
     
-    var lastName: String? = "Lucic" {
-        didSet { reloadable?.reload() }
+    var lastName: String? = User.loggedInUser?.lastName {
+        didSet {
+            if let lastName {
+                User.loggedInUser?.lastName = lastName
+            }
+            reloadable?.reload()
+        }
     }
     
-    var phone: String? = "+381641234567" {
-        didSet { reloadable?.reload() }
+    var phone: String? = User.loggedInUser?.phoneNumber {
+        didSet {
+            if let phone {
+                User.loggedInUser?.phoneNumber = phone
+            }
+            reloadable?.reload() }
     }
     
-    var address: String? = "Bulevar kralja Aleksandra 77" {
-        didSet { reloadable?.reload() }
+    var address: String? = User.loggedInUser?.address {
+        didSet {
+            if let address {
+                User.loggedInUser?.address = address
+            }
+            reloadable?.reload()
+        }
     }
     
     var items: [Section] { [
@@ -110,6 +131,9 @@ public final class ProfileViewModel {
     
     func changePassword(_ oldPassword: String?, _ newPassword: String?) throws {
         try Validator.validate(newPassword, against: .password)
+        if let newPassword {
+            User.loggedInUser?.password = newPassword
+        }
     }
 }
 
