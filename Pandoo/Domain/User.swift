@@ -15,6 +15,8 @@ public class User {
     var phoneNumber: String
     var password: String
     
+    var tickets = [Ticket]()
+    
     public init(email: String, firstName: String, lastName: String, address: String, phoneNumber: String, password: String) {
         self.email = email
         self.firstName = firstName

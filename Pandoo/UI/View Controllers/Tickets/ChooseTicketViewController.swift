@@ -14,9 +14,9 @@ public final class ChooseTicketViewController: UIViewController {
     
     private var observation: NSKeyValueObservation?
     
-    private let onTicket: (UIViewController) -> Void
+    private let onTicket: (UIViewController, TicketType) -> Void
     
-    public init?(coder: NSCoder, onTicket:  @escaping (UIViewController) -> Void) {
+    public init?(coder: NSCoder, onTicket:  @escaping (UIViewController, TicketType) -> Void) {
         self.onTicket = onTicket
         super.init(coder: coder)
     }
@@ -59,11 +59,35 @@ extension ChooseTicketViewController: UICollectionViewDelegate, UICollectionView
                 return UICollectionViewCell()
             }
             
+            if indexPath.item == 0 {
+                cell.titleLabel.text = "5 + 1"
+                cell.priceLabel.text = "30$"
+            } else if indexPath.item == 1 {
+                cell.titleLabel.text = "10 + 3"
+                cell.priceLabel.text = "60$"
+            } else {
+                cell.titleLabel.text = "20 + 7"
+                cell.priceLabel.text = "120$"
+            }
+            
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
+            
+            if indexPath.row == 0 {
+                cell.titleLabel.text = Strings.individual.localized
+                cell.numberOfPersonsLabel.text = "1 ".appending(Strings.person.localized)
+            } else {
+                cell.titleLabel.text = Strings.group.localized
+                cell.numberOfPersonsLabel.text = "2+ ".appending(Strings.configurableNumberOfPersons.localized)
+                cell.backgroundColor = .primaryOrange
+            }
+            cell.workTimeLabel.text = Strings.workTime.localized
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, dd MMMM yyyy"
+            cell.dateLabel.text = dateFormatter.string(from: Date.now)
             
             return cell
         }
@@ -90,9 +114,19 @@ extension ChooseTicketViewController: UICollectionViewDelegate, UICollectionView
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == promoTicketsCollectionView {
-            onTicket(self)
+            if indexPath.item == 0 {
+                onTicket(self, TicketType.promo5plus1)
+            } else if indexPath.item == 1 {
+                onTicket(self, TicketType.promo10plus3)
+            } else {
+                onTicket(self, TicketType.promo20plus7)
+            }
         } else {
-            onTicket(self)
+            if indexPath.item == 0 {
+                onTicket(self, TicketType.individual)
+            } else {
+                onTicket(self, TicketType.group)
+            }
         }
     }
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StepperDelegate: AnyObject {
+    func didChangeValue()
+}
+
 final class StepperTableViewCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [valueLabel, stepper])
@@ -27,6 +31,7 @@ final class StepperTableViewCell: UITableViewCell {
     private(set) lazy var stepper: UIStepper = {
         let stepper = UIStepper()
         stepper.tintColor = .primaryGreen
+        stepper.value = 1
         stepper.minimumValue = .zero
         stepper.addTarget(self, action: #selector(stepperValueChanged), for: .valueChanged)
         return stepper
@@ -35,6 +40,8 @@ final class StepperTableViewCell: UITableViewCell {
     var value: Int {
         return Int(stepper.value)
     }
+    
+    weak var delegate: StepperDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
@@ -54,5 +61,6 @@ final class StepperTableViewCell: UITableViewCell {
     
     @objc private func stepperValueChanged() {
         valueLabel.text = "\(value)"
+        delegate?.didChangeValue()
     }
 }

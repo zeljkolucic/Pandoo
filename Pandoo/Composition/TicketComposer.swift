@@ -26,10 +26,13 @@ public final class TicketComposer {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private static func presentBuyTicketViewController(over viewController: UIViewController) {
+    private static func presentBuyTicketViewController(over viewController: UIViewController, for ticketType: TicketType) {
         let bundle = Bundle(for: ChooseTicketViewController.self)
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        let buyTicketViewController = storyboard.instantiateViewController(withIdentifier: BuyTicketViewController.className)
+        let viewModel = BuyTicketViewModel(ticketType: ticketType)
+        let buyTicketViewController = storyboard.instantiateViewController(identifier: BuyTicketViewController.className) { coder in
+            return BuyTicketViewController(coder: coder, viewModel: viewModel)
+        }
         buyTicketViewController.modalPresentationStyle = .overFullScreen
         viewController.present(UINavigationController(rootViewController: buyTicketViewController), animated: true)
     }

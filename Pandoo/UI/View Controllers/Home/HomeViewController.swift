@@ -41,10 +41,15 @@ public final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
         configureCollectionView()
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateTickets), name: .didUpdateTickets, object: nil)
     }
     
     private func configureLayout() {
@@ -55,6 +60,16 @@ public final class HomeViewController: UIViewController {
         
         animalsTitle.text = Strings.animalsTitle.localized
         exploreAnimalsButton.setTitle(Strings.explore.localized, for: .normal)
+        
+        workDaysLabel.text = Strings.mondayThroughSunday.localized
+        workTimeLabel.text = Strings.workTime.localized
+        
+        contactLabel.text = Strings.contactPhone.localized
+        phoneNumberLabel.text = "+381 11 123 456"
+        
+        if viewModel.tickets.isEmpty {
+            ticketsCollectionView.isHidden = true
+        }
     }
     
     private func configureCollectionView() {
@@ -70,12 +85,21 @@ public final class HomeViewController: UIViewController {
     @IBAction private func didTapExploreAnimalsButton() {
         onExploreAnimals(navigationController)
     }
+    
+    @objc private func didUpdateTickets() {
+        if viewModel.tickets.isEmpty {
+            ticketsCollectionView.isHidden = true
+        } else {
+            ticketsCollectionView.isHidden = false
+            ticketsCollectionView.reloadData()
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == ticketsCollectionView {
-            return 2
+            return viewModel.tickets.count
         } else if collectionView == eventsCollectionView {
             return viewModel.events.count
         } else {
@@ -87,6 +111,29 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == ticketsCollectionView {
             guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
+            }
+            
+            let ticket = viewModel.tickets[indexPath.item]
+            let user = ticket.user
+            cell.titleLabel.text = "\(user.firstName) \(user.lastName) - ".appending(ticket.ticketId)
+            cell.dateLabel.text = ticket.formattedDate
+            cell.workTimeLabel.text = ticket.workingTime
+            
+            if ticket is IndividualTicket {
+                cell.numberOfPersonsLabel.text = "1 person"
+            } else if let ticket = ticket as? GroupTicket {
+                cell.backgroundColor = .primaryOrange
+                let numberOfPersons = ticket.numberOfAdults + ticket.numberOfChildren
+                cell.numberOfPersonsLabel.text = "\(numberOfPersons) persons (\(ticket.numberOfAdults) adults, \(ticket.numberOfChildren) children)"
+            } else if ticket is Promo5Plus1Ticket {
+                cell.backgroundColor = .primaryPurple
+                cell.numberOfPersonsLabel.text = "5 + 1"
+            } else if ticket is Promo10Plus3Ticket {
+                cell.backgroundColor = .primaryPurple
+                cell.numberOfPersonsLabel.text = "10 + 3"
+            } else {
+                cell.backgroundColor = .primaryPurple
+                cell.numberOfPersonsLabel.text = "20 + 7"
             }
             
             return cell

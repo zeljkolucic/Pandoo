@@ -24,10 +24,15 @@ public final class TicketsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
         configureCollectionView()
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateTickets), name: .didUpdateTickets, object: nil)
     }
     
     private func configureLayout() {
@@ -44,16 +49,43 @@ public final class TicketsViewController: UIViewController {
     @IBAction private func didTapBuyTicketButton() {
         onBuyTicket(navigationController)
     }
+    
+    @objc private func didUpdateTickets() {
+        collectionView.reloadData()
+    }
 }
 
 extension TicketsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return viewModel.tickets.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(TicketCollectionViewCell.self, indexPath: indexPath) else {
             return UICollectionViewCell()
+        }
+        
+        let ticket = viewModel.tickets[indexPath.item]
+        let user = ticket.user
+        cell.titleLabel.text = "\(user.firstName) \(user.lastName) - ".appending(ticket.ticketId)
+        cell.dateLabel.text = ticket.formattedDate
+        cell.workTimeLabel.text = ticket.workingTime
+        
+        if ticket is IndividualTicket {
+            cell.numberOfPersonsLabel.text = "1 person"
+        } else if let ticket = ticket as? GroupTicket {
+            cell.backgroundColor = .primaryOrange
+            let numberOfPersons = ticket.numberOfAdults + ticket.numberOfChildren
+            cell.numberOfPersonsLabel.text = "\(numberOfPersons) persons (\(ticket.numberOfAdults) adults, \(ticket.numberOfChildren) children)"
+        } else if ticket is Promo5Plus1Ticket {
+            cell.backgroundColor = .primaryPurple
+            cell.numberOfPersonsLabel.text = "5 + 1"
+        } else if ticket is Promo10Plus3Ticket {
+            cell.backgroundColor = .primaryPurple
+            cell.numberOfPersonsLabel.text = "10 + 3"
+        } else {
+            cell.backgroundColor = .primaryPurple
+            cell.numberOfPersonsLabel.text = "20 + 7"
         }
         
         return cell

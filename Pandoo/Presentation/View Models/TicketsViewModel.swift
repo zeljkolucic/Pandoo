@@ -8,5 +8,7 @@
 import Foundation
 
 public final class TicketsViewModel {
-    
+    var tickets: [Ticket] {
+        return User.loggedInUser?.tickets ?? []
+    }
 }

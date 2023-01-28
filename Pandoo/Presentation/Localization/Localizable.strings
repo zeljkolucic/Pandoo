@@ -61,3 +61,14 @@
 "date" = "Date";
 "buy" = "Buy";
 "registration_error_alert_title" = "There has been an error. Please try again later.";
+"individual" = "Individual";
+"group" = "Group";
+"work_time"  = "Open 9:30 AM - 8:00 PM";
+"person" = "person";
+"configurable_number_of_persons" = "persons (configurable)";
+"adults" = "Adults";
+"children" = "Children";
+"alert_error_title" = "There has been an error.";
+"monday_through_sunday" = "Monday-Sunday";
+"contact_phone" = "Contact phone";
+"group_ticket_limitation" = "Please select a valid number of tickets.";
