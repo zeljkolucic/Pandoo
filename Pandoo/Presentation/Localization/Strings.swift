@@ -62,4 +62,5 @@ public struct Strings {
     public static let only = "only"
     public static let date = "date"
     public static let buy = "buy"
+    public static let registrationErrorAlertTitle = "registration_error_alert_title"
 }

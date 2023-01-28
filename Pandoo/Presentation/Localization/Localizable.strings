@@ -60,3 +60,4 @@
 "only" = "only";
 "date" = "Date";
 "buy" = "Buy";
+"registration_error_alert_title" = "There has been an error. Please try again later.";

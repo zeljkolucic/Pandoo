@@ -44,7 +44,18 @@ public final class SecondStepRegistrationViewController: UIViewController {
     @IBAction private func didTapSubmitButton() {
         viewModel.email = emailTextField.text
         viewModel.password = passwordTextField.text
-        onSubmit(navigationController)
+        viewModel.register { [weak self] result in
+            switch result {
+            case .success:
+                self?.onSubmit(self?.navigationController)
+                
+            case .failure:
+                let title = Strings.registrationErrorAlertTitle.localized
+                let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: Strings.ok.localized, style: .default))
+                self?.present(alertController, animated: true)
+            }
+        }
     }
     
     private func configureTextFields() {
