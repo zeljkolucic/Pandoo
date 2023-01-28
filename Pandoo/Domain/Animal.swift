@@ -93,7 +93,13 @@ public class Animal {
 }
 
 public struct Comment {
-    public let user: String
+    public let user: User
     public let text: String
-    public let timestamp: Date
+    public let date: Date
+    
+    var timestamp: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+        return dateFormatter.string(from: date)
+    }
 }

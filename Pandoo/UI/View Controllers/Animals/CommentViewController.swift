@@ -23,7 +23,10 @@ public final class CommentViewController: UIViewController {
         return cell?.text
     }
     
-    public init() {
+    private let viewModel: AnimalViewModel
+    
+    public init(viewModel: AnimalViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -48,7 +51,7 @@ public final class CommentViewController: UIViewController {
     
     @objc private func didTapDoneButton() {
         do {
-            
+            try viewModel.addComment(text)
             navigationController?.popViewController(animated: true)
         } catch {
             let title = Strings.emptyComment.localized

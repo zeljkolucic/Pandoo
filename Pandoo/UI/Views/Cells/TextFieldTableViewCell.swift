@@ -12,6 +12,8 @@ class TextFieldTableViewCell: UITableViewCell {
         let textField = UITextField()
         textField.delegate = self
         textField.clearButtonMode = .whileEditing
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()

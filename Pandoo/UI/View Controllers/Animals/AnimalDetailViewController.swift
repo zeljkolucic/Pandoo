@@ -33,9 +33,9 @@ public final class AnimalDetailViewController: UIViewController {
     }
     
     private let viewModel: AnimalViewModel
-    private let onComment: (UINavigationController?) -> Void
+    private let onComment: (AnimalViewModel, UINavigationController?) -> Void
     
-    public init?(coder: NSCoder, viewModel: AnimalViewModel, onComment: @escaping (UINavigationController?) -> Void) {
+    public init?(coder: NSCoder, viewModel: AnimalViewModel, onComment: @escaping (AnimalViewModel, UINavigationController?) -> Void) {
         self.viewModel = viewModel
         self.onComment = onComment
         super.init(coder: coder)
@@ -48,6 +48,7 @@ public final class AnimalDetailViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        viewModel.delegate = self
         loadData()
     }
     
@@ -56,8 +57,9 @@ public final class AnimalDetailViewController: UIViewController {
         containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         commentsLabel.text = Strings.comments.localized
         commentsTableView.register(CommentTableViewCell.self)
+        commentsTableView.contentInset.bottom = 60
         observation = commentsTableView.observe(\.contentSize) { tableView, _ in
-            self.commentsTableViewHeightConstraint.constant = tableView.contentSize.height
+            self.commentsTableViewHeightConstraint.constant = tableView.contentSize.height + tableView.contentInset.bottom
         }
         commentButton.layer.cornerRadius = 5
         commentButton.setTitle(Strings.comment.localized, for: .normal)
@@ -77,7 +79,7 @@ public final class AnimalDetailViewController: UIViewController {
     }
     
     @IBAction private func didTapCommentButton() {
-        onComment(navigationController)
+        onComment(viewModel, navigationController)
     }
 }
 
@@ -92,10 +94,17 @@ extension AnimalDetailViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         let comment = viewModel.animal.comments[indexPath.row]
-        cell.nameLabel.text = comment.user
-        cell.timestampLabel.text = ""
+        let user = comment.user
+        cell.nameLabel.text = "\(user.firstName) \(user.lastName)"
+        cell.timestampLabel.text = comment.timestamp
         cell.commentLabel.text = comment.text
         
         return cell
+    }
+}
+
+extension AnimalDetailViewController: CommentDelegate {
+    func didAddComment() {
+        commentsTableView.reloadData()
     }
 }

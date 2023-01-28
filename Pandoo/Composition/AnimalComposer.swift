@@ -28,8 +28,8 @@ public final class AnimalComposer {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    public static func pushCommentViewController(to navigationController: UINavigationController?) {
-        let viewController = CommentViewController()
+    public static func pushCommentViewController(with viewModel: AnimalViewModel, to navigationController: UINavigationController?) {
+        let viewController = CommentViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

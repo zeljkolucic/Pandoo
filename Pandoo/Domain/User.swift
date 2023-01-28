@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+public class User {
     let email: String
     var firstName: String
     var lastName: String
@@ -15,7 +15,7 @@ class User {
     var phoneNumber: String
     var password: String
     
-    init(email: String, firstName: String, lastName: String, address: String, phoneNumber: String, password: String) {
+    public init(email: String, firstName: String, lastName: String, address: String, phoneNumber: String, password: String) {
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
