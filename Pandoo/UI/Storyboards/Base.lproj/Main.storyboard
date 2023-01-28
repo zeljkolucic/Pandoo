@@ -865,6 +865,8 @@
                         <outlet property="animalsTitle" destination="ozc-KE-oCj" id="ho1-nA-caj"/>
                         <outlet property="contactLabel" destination="tr1-9p-aU7" id="raD-nN-qdJ"/>
                         <outlet property="eventsCollectionView" destination="lR1-HP-8dF" id="K9K-V7-NIO"/>
+                        <outlet property="eventsStackView" destination="2ny-F6-7a9" id="5qI-zd-FzD"/>
+                        <outlet property="eventsStackViewTopConstraint" destination="RVz-df-dde" id="e2z-rG-GT0"/>
                         <outlet property="eventsTitle" destination="sbX-fb-b1W" id="rue-I6-vjL"/>
                         <outlet property="exploreAnimalsButton" destination="dk5-VZ-8o5" id="ksj-OL-vqc"/>
                         <outlet property="phoneNumberLabel" destination="xJw-EJ-85z" id="MOM-hg-dgF"/>

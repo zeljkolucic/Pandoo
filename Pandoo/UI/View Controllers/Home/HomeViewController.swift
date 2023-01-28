@@ -19,6 +19,8 @@ public final class HomeViewController: UIViewController {
     @IBOutlet private weak var workTimeLabel: UILabel!
     @IBOutlet private weak var contactLabel: UILabel!
     @IBOutlet private weak var phoneNumberLabel: UILabel!
+    @IBOutlet private weak var eventsStackView: UIStackView!
+    @IBOutlet private weak var eventsStackViewTopConstraint: NSLayoutConstraint!
     
     private let sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     
@@ -67,9 +69,7 @@ public final class HomeViewController: UIViewController {
         contactLabel.text = Strings.contactPhone.localized
         phoneNumberLabel.text = "+381 11 123 456"
         
-        if viewModel.tickets.isEmpty {
-            ticketsCollectionView.isHidden = true
-        }
+        updateTicketsCollectionViewVisibility()
     }
     
     private func configureCollectionView() {
@@ -87,9 +87,19 @@ public final class HomeViewController: UIViewController {
     }
     
     @objc private func didUpdateTickets() {
+        updateTicketsCollectionViewVisibility()
+    }
+    
+    private func updateTicketsCollectionViewVisibility() {
         if viewModel.tickets.isEmpty {
             ticketsCollectionView.isHidden = true
+            eventsStackViewTopConstraint.isActive = false
+            eventsStackViewTopConstraint = eventsStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+            eventsStackViewTopConstraint.isActive = true
         } else {
+            eventsStackViewTopConstraint.isActive = false
+            eventsStackViewTopConstraint = eventsStackView.topAnchor.constraint(equalTo: ticketsCollectionView.bottomAnchor, constant: 20)
+            eventsStackViewTopConstraint.isActive = true
             ticketsCollectionView.isHidden = false
             ticketsCollectionView.reloadData()
         }
